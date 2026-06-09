@@ -1,0 +1,571 @@
+[
+  {
+      "name": "Kasparov vs Topalov (1999)",
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "Be3", "Bg7", "Qd2", "c6", "f3", 
+        "b5", "Nge2", "Nbd7", "Bh6", "Bxh6", "Qxh6", "Bb7", "a3", "e5", "O-O-O", "Qe7", 
+        "Kb1", "a6", "Nc1", "O-O-O", "Nb3", "exd4", "Rxd4", "c5", "Rd1", "Nb6", "g3", 
+        "Kb8", "Na5", "Ba8", "Bh3", "d5", "Qf4+", "Ka7", "Rhe1", "d4", "Nd5", "Nb6xd5", 
+        "exd5", "Qd6", "Rxd4", "cxd4", "Re7+", "Kb6", "Qxd4+", "Ka5", "b4+", "Ka4", "Qc3", 
+        "Qxd5", "Ra7", "Bb7", "Rxb7", "Qc4", "Qxf6", "Kxa3", "Qxa6+", "Kxb4", "c3+", 
+        "Kxc3", "Qa1+", "Kd2", "Qb2+", "Kd1", "Bf1", "Rd2", "Rd7", "Rxd7", "Bxc4", "bxc4", 
+        "Qxh8", "Rd3", "Qa8", "c3", "Qa4+", "Ke1", "f4", "f5", "Kc1", "Rd2", "Qa7"],
+        "details": "White: Kasparov ; Black: Topalov ; Score: 1-0"
+    },
+    {
+      "name": "Fischer vs Spassky (1972)",
+      "moves": ["c4", "e6", "Nf3", "d5", "d4", "Nf6", "Nc3", "Be7", "Bg5", "O-O", "e3", 
+        "h6", "Bh4", "b6", "cxd5", "Nxd5", "Bxe7", "Qxe7", "Nxd5", "exd5", "Rc1", 
+        "Be6", "Qa4", "c5", "Qa3", "Rc8", "Bb5", "a6", "dxc5", "bxc5", "O-O", 
+        "Ra7", "Be2", "Nd7", "Nd4", "Qf8", "Nxe6", "fxe6", "e4", "d4", "f4", 
+        "Qe7", "e5", "Rb8", "Bc4", "Kh8", "Qh3", "Nf8", "b3", "a5", "f5", 
+        "exf5", "Rxf5", "Nh7", "Rcf1", "Qd8", "Qg3", "Re7", "h4", "Rbb7", 
+        "e6", "Rbc7", "Qe5", "Qe8", "a4", "Qd8", "R1f2", "Qe8", "R2f3", 
+        "Qd8", "Bd3", "Qe8", "Qe4", "Nf6", "Rxf6", "gxf6", "Rxf6", "Kg8", 
+        "Bc4", "Kh8", "Qf4"],
+        "details": "White: Fischer ; Black: Spassky ; Score: 1-0"       
+    },
+    {
+      "name": "Tal vs Botvinnik (1960)",
+      "moves": [
+        "e4", "c6", "d4", "d5", "Nc3", "dxe4", "Nxe4", "Bf5", "Ng3", "Bg6", 
+        "N1e2", "Nd7", "h4", "h6", "Nf4", "Bh7", "Bc4", "e5", "Qe2", "Qe7", 
+        "dxe5", "Qxe5", "Be3", "Bc5", "Bxc5", "Qxe2+", "Kxe2", "Nxc5", "Rhe1", 
+        "Nf6", "b4", "Ncd7", "Kf1+", "Kf8", "Bb3", "g5", "hxg5", "hxg5", 
+        "Nh3", "Rg8", "Red1", "a5", "bxa5", "Rxa5", "Rd6", "Ke7", "Rad1", 
+        "Re5", "Nh5", "Bg6", "Rxd7+", "Nxd7", "Rxd7+", "Kxd7", "Nf6+", 
+        "Kd6", "Nxg8", "Rc5", "Nh6", "f6", "Ng4", "Bxc2", "Nxf6", "Bxb3", 
+        "axb3", "Rb5", "Nxg5", "Rxb3", "f4", "Rb1+", "Ke2", "Rb2+", "Kf3", 
+        "Rb3+", "Kg4", "Rb2", "g3", "b5", "Nfe4+", "Kd5", "f5", "b4", 
+        "f6", "Ra2", "f7", "Ra8", "Nh7", "b3", "Nd2", "b2", "Kf3", "Kd4", 
+        "Ke2", "c5", "f8=Q", "Rxf8", "Nxf8", "c4", "Ne6+", "Kd5", "Nf4+", 
+        "Kd4", "Nb1"],
+        "details": "White: Tal ; Black: Botvinnik ; Score: 1-0"
+    },
+    {
+      "name": "Carlsen vs Anand (2013)",
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "Nf6", "d3", "Bc5", "O-O", "d6", "Re1", 
+        "O-O", "Bxc6", "bxc6", "h3", "Re8", "Nbd2", "Nd7", "Nc4", "Bb6", "a4", 
+        "a5", "Nxb6", "cxb6", "d4", "Qc7", "Ra3", "Nf8", "dxe5", "dxe5", "Nh4", 
+        "Rd8", "Qh5", "f6", "Nf5", "Be6", "Rg3", "Ng6", "h4", "Bxf5", "exf5", 
+        "Nf4", "Bxf4", "exf4", "Rc3", "c5", "Re6", "Rab8", "Rc4", "Qd7", "Kh2", 
+        "Rf8", "Rce4", "Rb7", "Qe2", "b5", "b3", "bxa4", "bxa4", "Rb4", "Re7", 
+        "Qd6", "Qf3", "Rxe4", "Qxe4", "f3", "g3", "h5", "Qb7"],
+        "details": "White: Carlsen ; Black: Anand ; Score: 1-0"      
+    },
+    {
+      "name": "Byrne vs Fischer (1956)",
+      "moves": ["Nf3", "Nf6", "c4", "g6", "Nc3", "Bg7", "d4", "O-O", "Bf4", "d5", "Qb3", "dxc4", "Qxc4", "c6", 
+        "e4", "Nbd7", "Rd1", "Nb6", "Qc5", "Bg4", "Bg5", "Na4", "Qa3", "Nxc3", "bxc3", "Nxe4", "Bxe7", "Qb6", 
+        "Bc4", "Nxc3", "Bc5", "Rfe8+", "Kf1", "Be6", "Bxb6", "Bxc4+", "Kg1", "Ne2+", "Kf1", "Nxd4+", "Kg1", 
+        "Ne2+", "Kf1", "Nc3+", "Kg1", "axb6", "Qb4", "Ra4", "Qxb6", "Nxd1", "h3", "Rxa2", "Kh2", "Nxf2", "Re1", 
+        "Rxe1", "Qd8+", "Bf8", "Nxe1", "Bd5", "Nf3", "Ne4", "Qb8", "b5", "h4", "h5", "Ne5", "Kg7", "Kg1", "Bc5+", 
+        "Kf1", "Ng3+", "Ke1", "Bb4+", "Kd1", "Bb3+", "Kc1", "Ne2+", "Kb1", "Nc3+", "Kc1", "Rc2"],
+        "details": "White: Byrne ; Black: Fischer ; Score: 0-1"
+    },
+    {
+      "name": "Karpov vs Kasparov (1985)",
+      "moves": ["e4", "c5", "Nf3", "e6", "d4", "cxd4", "Nxd4", "Nc6", "Nb5", "d6", "c4", "Nf6", "N1c3", "a6", "Na3",
+        "d5", "cxd5", "exd5", "exd5", "Nb4", "Be2", "Bc5", "O-O", "O-O", "Bf3", "Bf5", "Bg5", "Re8", "Qd2", "b5",
+        "Rad1", "Nd3", "Nab1", "h6", "Bh4", "b4", "Na4", "Bd6", "Bg3", "Rc8", "b3", "g5", "Bxd6", "Qxd6", "g3", "Nd7",
+        "Bg2", "Qf6", "a3", "a5", "axb4", "axb4", "Qa2", "Bg6", "d6", "g4", "Qd2", "Kg7", "f3", "Qxd6", "fxg4", "Qd4+",
+        "Kh1", "Nf6", "Rf4", "Ne4", "Qxd3", "Nf2+", "Rxf2", "Bxd3", "Rfd2", "Qe3", "Rxd3", "Rc1", "Nb2", "Qf2","Nd2", 
+        "Rxd1+", "Nxd1", "Re1+"],
+        "details": "White: Karpov ; Black: Kasparov ; Score: 0-1"
+    },    
+    {
+      "name": "Aronian vs Anand (2013)",
+      "moves": [
+        "d4", "d5", "c4", "c6", "Nf3", "Nf6", "Nc3", "e6", "e3", "Nbd7", "Bd3", 
+        "dxc4", "Bxc4", "b5", "Bd3", "Bd6", "O-O", "O-O", "Qc2", "Bb7", "a3", 
+        "Rc8", "Ng5", "c5", "Nxh7", "Ng4", "f4", "cxd4", "exd4", "Bc5", "Be2", 
+        "Nde5", "Bxg4", "Bxd4+", "Kh1", "Nxg4", "Nxf8", "f5", "Ng6", "Qf6", "h3", 
+        "Qxg6", "Qe2", "Qh5", "Qd3", "Be3"],
+        "details": "White: Aronian ; Black: Anand ; Score: 0-1"
+    },
+    {
+      "name": "Ivanchuk vs Yusupov (1991)",
+      "moves": [
+        "c4", "e5", "g3", "d6", "Bg2", "g6", "d4", "Nd7", "Nc3", "Bg7", "Nf3", "Ngf6", 
+        "O-O", "O-O", "Qc2", "Re8", "Rd1", "c6", "b3", "Qe7", "Ba3", "e4", "Ng5", 
+        "e3", "f4", "Nf8", "b4", "Bf5", "Qb3", "h6", "Nf3", "Ng4", "b5", "g5", 
+        "bxc6", "bxc6", "Ne5", "gxf4", "Nxc6", "Qg5", "Bxd6", "Ng6", "Nd5", "Qh5", 
+        "h4", "Nxh4", "gxh4", "Qxh4", "Nde7+", "Kh8", "Nxf5", "Qh2+", "Kf1", 
+        "Re6", "Qb7", "Rg6", "Qxa8+", "Kh7", "Qg8+", "Kxg8", "Nce7+", "Kh7", 
+        "Nxg6", "fxg6", "Nxg7", "Nf2", "Bxf4", "Qxf4", "Ne6", "Qh2", "Rdb1", 
+        "Nh3", "Rb7+", "Kh8", "Rb8+", "Qxb8", "Bxh3", "Qg3"],
+        "details": "White: Ivanchuk ; Black: Yusupov ; Score: 0-1"
+    },
+    {
+      "name": "Short vs Timman (1991)",
+      "moves": [
+        "e4", "Nf6", "e5", "Nd5", "d4", "d6", "Nf3", "g6", "Bc4", "Nb6", "Bb3", 
+        "Bg7", "Qe2", "Nc6", "O-O", "O-O", "h3", "a5", "a4", "dxe5", "dxe5", 
+        "Nd4", "Nxd4", "Qxd4", "Re1", "e6", "Nd2", "Nd5", "Nf3", "Qc5", "Qe4", 
+        "Qb4", "Bc4", "Nb6", "b3", "Nxc4", "bxc4", "Re8", "Rd1", "Qc5", "Qh4", 
+        "b6", "Be3", "Qc6", "Bh6", "Bh8", "Rd8", "Bb7", "Rad1", "Bg7", "R8d7", 
+        "Rf8", "Bxg7", "Kxg7", "R1d4", "Rae8", "Qf6+", "Kg8", "h4", "h5", 
+        "Kh2", "Rc8", "Kg3", "Rce8", "Kf4", "Bc8", "Kg5"],
+        "details": "White: Short ; Black: Timman ; Score: 1-0"
+    },
+    {
+      "name": "Gukesh vs Carlsen (2022)",
+      "moves": [
+        "e4", "e6", "d4", "d5", "Nc3", "Nf6", "e5", "Nfd7", "f4", "c5", "Nf3", 
+        "Nc6", "Be3", "a6", "Qd2", "b5", "dxc5", "Bxc5", "Bxc5", "Nxc5", 
+        "Bd3", "Qb6", "Qf2", "b4", "Ne2", "a5", "O-O", "Ba6", "f5", "exf5", 
+        "Nf4", "Ne7", "e6", "f6", "Rac1", "O-O", "c3", "Qd6", "Bxa6", "Rxa6", 
+        "cxb4", "Ne4", "Qe3", "axb4", "Nd4", "Rxa2", "Nb5", "Qe5", "Rc7", 
+        "Re8", "Qb6", "Ng5", "Rxe7", "Rea8", "Qc7", "Qe3+", "Kh1"],
+        "details": "White: Gukesh ; Black: Carlsen ; Score: 1-0"
+    },
+    {
+      "name": "Ahmed Adly vs Ali Khalaf (2025)",
+      "moves": ["Nf3", "Nf6", "c4", "g6", "d4", "Bg7", "g3", "O-O", "Bg2", "d5", "cxd5", "Nxd5", "O-O", "Nc6", "e3", "h6", "Re1", "Nb6", "Nc3", "Bg4", "h3", "Bc8", "Nd2", "a5", "f4", "a4", "a3", "Bf5", "Nde4", "Nc4", "Nc5", "Ra7", "Nb5", "Nb8"],
+      "details": "White: Ahmed Adly; Black: Ali Khalaf; Score: 1-0"
+    },
+    {
+      "name": "Paul Morphy vs Charles Maurian (1869)",
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "O-O", "Nf6", "Ng5", "O-O", "Ba3", "d6", "d4", "h6", "Nxf7", "Rxf7", "Bxf7+", "Kxf7", "f4", "exd4", "e5", "Ng4", "e6+", "Bxe6", "f5", "Bd5", "f6", "Nxf6", "Qh5+", "Kg8", "Rxf6", "Qxf6", "Qxd5+", "Qf7", "Qb5", "Rf8", "cxd4", "Qf2+", "Kh1", "Nxd4", "Qd3", "Be1"],
+      "details": "White: Paul Morphy; Black: Charles Maurian; Score: 0-1"
+    },
+    {
+      "name": "Mikhail Tal vs Vladimir Akopian (1992)",
+      "moves": ["e4", "c5", "Nf3", "Nc6", "Bb5", "d6", "O-O", "Bd7", "Re1", "Nf6", "c3", "a6", "Ba4", "c4", "d4", "cxd3", "Bg5", "e6", "Qxd3", "Be7", "Bxf6", "gxf6", "Bxc6", "Bxc6", "c4", "O-O", "Nc3", "Kh8", "Rad1", "Rg8", "Qe3", "Qf8", "Nd4", "Rc8", "f4", "Bd7", "b3", "Bd8", "Nf3", "b5", "Qa7", "Bc7", "Qxa6", "bxc4", "b4", "Qg7", "g3", "d5", "exd5", "Bxf4", "Kf2", "f5", "gxf4", "Qxc3", "Qd6", "Ba4", "Rd4", "Rg7", "dxe6", "Bc6", "Ng5", "Rxg5", "Qe5+", "Rg7", "Rd8+", "Rxd8", "Qxc3", "f6", "e7", "Ra8", "Qxf6", "Be4", "Rg1", "Rxa2+", "Ke1"],
+      "details": "White: Mikhail Tal; Black: Vladimir Akopian; Score: 1-0"
+    },
+    {
+      "name": "Fabiano Caruana vs Alberto Martin Fuentes (2025)",
+      "moves": ["e4", "e6", "d4", "d5", "Nc3", "Bb4", "e5", "Ne7", "a3", "Bxc3+", "bxc3", "b6", "Qg4", "Ng6", "h4", "h5", "Qd1", "Ba6", "Bxa6", "Nxa6", "Bg5", "Qd7", "Ne2", "Qc6", "a4", "Qc4", "O-O", "Nb8", "Ra3", "Ne7", "Nf4", "g6", "g3", "Nbc6", "Ng2", "Na5", "Ne3", "Qc6", "Bf6", "Rg8", "Bxe7", "Kxe7", "Qf3", "Raf8", "Rb1", "Kd7", "Rxb4", "Kc8", "Qe2", "Kb7", "c4", "dxc4", "Nxc4", "Nxc4", "Rxc4", "Qd5", "a5", "Rd8", "axb6", "axb6", "Rxa4", "Ra8", "c4", "Qc6", "Qa2", "Rxa4", "Rxa4", "Rb8", "d5", "Qc5", "Ra7+", "Kc8", "d6", "cxd6", "Rxf7", "b5", "Qa6+", "Kd8", "Rf8+", "Kc7", "exd6+", "Qxd6", "Rf7+"],
+      "details": "White: Fabiano Caruana; Black: Alberto Martin Fuentes; Score: 1-0"
+    },
+    {
+      "name": "Judit Polgar vs Armin Juhasz (2024)",
+      "moves": ["e4", "c5", "Nf3", "g6", "d4", "cxd4", "Qxd4", "Nf6", "e5", "Nc6", "Qf4", "Nd5", "Qd2", "Nb6", "b3", "Bg7", "Bb2", "O-O", "c4", "Qc7", "Qe3", "Nb4", "Na3", "Rd8", "O-O-O", "Nxa2+", "Kb1", "Nb4", "Bc3", "Nc6", "Nb5", "Qb8", "c5", "a6", "Na3", "Na4", "bxa4", "Qc7", "Bc4", "Rb8", "h4", "b5", "cxb6", "Rxb6+", "Ka1", "Rb4", "Bxb4", "Nxb4", "Qc3", "Nc6", "Bd5", "Bb7", "h5", "e6", "Be4", "d6", "hxg6", "hxg6", "Bxc6", "Bxc6", "Rc1", "Rc8", "Rhe1", "Qb8", "Qb2", "Qa8", "Nc4", "Rb8", "Nb6", "Qb7", "a5", "Bxf3", "gxf3", "Qxf3", "Ka2", "Qf5", "Rc8+", "Rxc8", "Nxc8", "Bxe5", "Ne7+", "Kf8", "Nxf5", "Bxb2", "Kxb2", "gxf5", "Rc1"],
+      "details": "White: Judit Polgar; Black: Armin Juhasz; Score: 1-0"
+    },
+    {
+      "name": "Mikhail Botvinnik vs Konstantin Zalkind (2013)",
+      "moves": ["d4", "d5", "c4", "dxc4", "e4", "Nf6", "e5", "Nd5", "Bxc4", "Nb6", "Bb3", "Nc6", "Be3", "Bf5", "Nf3", "e6", "Nc3", "Qd7", "O-O", "O-O-O", "Qe2", "Nb4", "Rfd1", "a6", "Rac1", "N4d5", "Nh4", "Bg6", "Nxg6", "hxg6", "Ne4", "Nxe3", "Qxe3", "Nd5", "Qf3", "Kb8", "Bc4", "Bb4", "a3", "Ba5", "Nc5", "Qe7", "b4", "Bb6", "Ne4", "f5", "exf6", "gxf6", "Nc5", "c6", "Re1", "Bc7", "g3", "e5", "dxe5", "Bxe5", "Nd3", "Qh7", "Qg2", "Bd4", "Nc5", "Rd6", "Rcd1", "Be5", "f4", "Ne3", "Qe2", "Bd4", "Rxd4", "Rxd4", "Be6", "Nd5", "h3", "Nc7", "Bg4", "f5", "Qf2", "Rhd8", "Bf3", "Qxh3", "Bg2", "Qh8", "Re7", "Rd1+", "Bf1", "R8d2"],
+      "details": "White: Konstantin Zalkind; Black: Mikhail Botvinnik; Score: 0-1"
+    },
+    {
+      "name": "Alexander Alekhine vs Max Euwe (2021)",
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6", "e3", "Bf5", "cxd5", "cxd5", "Nc3", "e6", "Qb3", "Qc8", "Bd2", "Nc6", "Rc1", "Be7", "Bb5", "O-O", "O-O", "Qd8", "Na4", "Na5", "Bxa5", "Qxa5", "Nc5", "Bxc5", "dxc5", "Ne4", "Qa4", "Qxa4", "Bxa4", "Rfc8", "c6", "bxc6", "Bxc6", "Rab8", "Nd4", "Rxb2", "Nxf5", "exf5", "Bxd5", "Nc3", "Kh1", "g6", "Bb3", "Rc5", "f3", "a5", "e4", "a4", "Bd5", "Rbb5", "h3", "Kg7", "Rc2", "Nxd5", "Rxc5", "Rxc5", "exd5", "Rxd5", "Rf2", "Kf6", "Re2", "Re5", "Rc2", "Re3", "Kh2", "Ra3", "Kg3", "Ke5", "Rd2", "h6", "h4", "h5", "Re2+", "Kd6", "Kf4", "f6", "Rc2", "Kd5", "g3", "g5+", "hxg5", "fxg5+", "Kxg5", "Rxf3", "Rg2", "Kd4", "Kxh5", "f4", "gxf4", "Rxf4", "Kg5", "Re4", "Kf5", "Re5+", "Kf4", "Re8", "Kf3", "Kd3", "Rb2", "Rf8+", "Kg3", "Kc3", "Rb7", "Rf1", "Rb8", "Ra1", "Kf3", "Rxa2", "Ke3", "Rh2", "Rc8+", "Kb2", "Rb8+", "Kc1", "Rc8+", "Kb1", "Rb8+", "Rb2", "Ra8", "Rb3+", "Kd4", "a3", "Kc4", "Kb2", "Rh8", "Rc3+"],
+      "details": "White: Max Euwe; Black: Alexander Alekhine; Score: 0-1"
+    },
+    {
+      "name": "Abhimanyu Mishra vs Luka Budisavljevic (2025)",
+      "moves": ["d4", "Nf6", "c4", "a6", "Nc3", "c5", "dxc5", "e6", "e4", "Qc7", "f4", "Bxc5", "e5", "Ng8", "Ne4", "b5", "cxb5", "axb5", "Nf3", "Nh6", "Nxc5", "Qxc5", "Qd4", "Qc7", "Bd3", "Rxa2", "Rb1", "Bb7", "O-O", "Ra4", "Qf2", "Bxf3", "Qxf3", "Nc6", "b3", "Ra2", "Kh1", "b4", "Qe4", "Ng4", "Rb2", "Ra1", "h3", "Nh6", "Rc2", "Nf5", "Kh2", "Qa7", "g4", "Nfd4", "Be3", "Ra2", "Rff2", "Rxc2", "Bxc2", "Ke7", "Rd2", "Rc8", "Bd1", "Qc5", "Bxd4", "Qc1", "Be3", "Qc3", "Qd3", "Na5", "Qxd7+", "Kf8", "Qd6+", "Ke8", "Qd7+", "Kf8", "Qd3", "Qc6", "Rc2"],
+      "details": "White: Abhimanyu Mishra; Black: Luka Budisavljevic; Score: 1-0"
+    },
+    {
+      "name": "Hikaru Nakamura vs Igor A. Gulkov (2025)",
+      "moves": ["b3", "g6", "Bb2", "Nf6", "Bxf6", "exf6", "e3", "d5", "d4", "Bg7", "Ne2", "c6", "g3", "f5", "Bg2", "Be6", "O-O", "Nd7", "Nd2", "Nf6", "c4", "Ne4", "Rc1", "O-O", "Nf4", "Qa5", "Nxe4", "fxe4", "cxd5", "cxd5", "Nxe6", "fxe6", "Bh3", "Rfe8", "Qe2", "Bf8", "f3", "e5", "fxe4", "exd4", "Qf3", "Re7", "Be6+"],
+      "details": "White: Hikaru Nakamura; Black: Igor A. Gulkov ; Score: 1-0"
+    },
+  {
+    "name": "Zukertort, Johannes H vs Steinitz, Wilhelm (1886)",
+    "moves": ["d4","d5","c4","c6","e3","Bf5","a3","e6","c5","a5","Qb3","Qc7","Nc3","Nd7","Na4","Ngf6","Ne2","Be7","Ng3","Bg6","Bd2","O-O","Be2","Rfb8","O-O","b6","cxb6","Nxb6","Nxb6","Rxb6","Qc3","Qb7","Ra2","Nd7","Bd1","c5","Ba4","c4","Qc1","Nf6","Bc3","Bd6","f3","Qb8","f4","Bd3","Re1","h5","h4","Qd8","Bd1","g6","Qd2","Rbb8","Qf2","Be7","Bf3","Ne4","Bxe4","dxe4","Nh1","Bxh4","g3","Be7","Qd2","Qd5","Nf2","a4","Kg2","Rb3","Rh1","Kg7","Raa1","Bd8","g4","hxg4","Nxg4","Ba5","Rh7+","Kf8","Rh8+","Kg7","Rh7+","Kf8","Qf2","Bd8","Ne5","Kg8","Rah1","Bf6","Rxf7","Rf8","Rxf6"],
+    "details": "White: Zukertort, Johannes H ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Zukertort, Johannes H (1886)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","O-O","Nxe4","Re1","Nd6","Nxe5","Nxe5","Rxe5+","Be7","Bf1","O-O","d4","Bf6","Re1","Re8","c3","Rxe1","Qxe1","Nf5","Bf4","d6","Nd2","Be6","Bd3","Nh4","Ne4","Ng6","Bd2","d5","Nc5","Bc8","Qe3","b6","Nb3","Qd6","Qe8+","Nf8","Re1","Bb7","Qe3","Ne6","Qf3","Rd8","Qf5","Nf8","Bf4","Qc6","Nd2","Bc8","Qh5","g6","Qe2","Ne6","Bg3","Qb7","Nf3","c5","dxc5","bxc5","Ne5","c4","Bb1","Bg7","Rd1","Bd7","Qf3","Be8","Nxc4","dxc4","Rxd8","Nxd8","Qe2","Ne6"],
+    "details": "White: Steinitz, Wilhelm ; Black: Zukertort, Johannes H ; Score: 0-1"
+  },
+  {
+    "name": "Zukertort, Johannes H vs Steinitz, Wilhelm (1886)",
+    "moves": ["d4","d5","c4","c6","Nc3","Nf6","e3","Bf5","cxd5","cxd5","Qb3","Bc8","Nf3","Nc6","Ne5","e6","Bb5","Qc7","Bd2","Bd6","f4","O-O","Rc1","Bxe5","fxe5","Ne8","O-O","f6","Bd3","Rf7","Qc2","f5","Ne2","Bd7","Rf2","Rc8","Bc3","Qb6","Qd2","Ne7","Rcf1","Bb5","Bb1","Qa6","g4","g6","h3","Rc7","Re1","Ng7","Nf4","Nc8","gxf5","gxf5","Rg2","Kh8","Kh2","Qc6","Reg1","Ne7","Qf2","Qe8","Rxg7"],
+    "details": "White: Zukertort, Johannes H ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Zukertort, Johannes H (1886)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","O-O","Nxe4","Re1","Nd6","Nxe5","Nxe5","Rxe5+","Be7","Nc3","O-O","Bd3","Bf6","Re3","g6","b3","Re8","Qf3","Bg5","Rxe8+","Nxe8","Bb2","c6","Ne4","Be7","Qe3","d5","Qd4","f6","Ng3","Be6","Re1","Ng7","h4","Qd7","h5","Bf7","hxg6","Bxg6","Qe3","Kf7","Qf4","Re8","Re3","Ne6","Qg4","Nf8","Nf5","Bc5","Nh6+","Kg7","Nf5+","Kf7","Nh6+","Kg7","Nf5+","Kf7","Nh6+","Kg7","Nf5+","Kf7","Nh6+","Kg7","Bxg6","Qxg4","Nxg4","Rxe3","fxe3","Kxg6","Nxf6","Bb4","d3","Ne6","Kf2","h5","g4","h4","Nh5","Bd6","Kg2","c5","Bf6","Ng5","Bxg5","Kxg5","Kh3","Be5","Nf4","d4","Ne6+","Kf6","exd4","cxd4","Nc5","Kg5","Nxb7","Kf4","Na5","Bf6","Nc6","Ke3","Nxa7","Kd2","Nc6","Kxc2","a4","Kxd3","Nb4+","Ke2","a5","Be7","Nd5","Kf3","Nxe7","d3","Nd5"],
+    "details": "White: Steinitz, Wilhelm ; Black: Zukertort, Johannes H ; Score: 1-0"
+  },
+  {
+    "name": "Zukertort, Johannes H vs Steinitz, Wilhelm (1886)",
+    "moves": ["d4","d5","c4","e6","Nc3","Nf6","e3","c5","Nf3","Nc6","a3","dxc4","Bxc4","cxd4","exd4","Be7","O-O","O-O","Be3","Bd7","Qd3","Rc8","Rac1","Qa5","Ba2","Rfd8","Rfe1","Be8","Bb1","g6","Qe2","Bf8","Red1","Bg7","Ba2","Ne7","Qd2","Qa6","Bg5","Nf5","g4","Nxd4","Nxd4","e5","Nd5","Rxc1","Qxc1","exd4","Rxd4","Nxd5","Rxd5","Rxd5","Bxd5","Qe2","h3","h6","Bc4","Qf3","Qe3","Qd1+","Kh2","Bc6","Be7","Be5+","f4","Bxf4+","Qxf4","Qh1+","Kg3","Qg1+"],
+    "details": "White: Zukertort, Johannes H ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Zukertort, Johannes H (1886)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","O-O","Nxe4","Re1","Nd6","Nxe5","Be7","Bd3","O-O","Qh5","f5","Nc3","Nxe5","Rxe5","g6","Qf3","c6","b3","Nf7","Re2","d5","Bb2","Bf6","Rae1","Qd6","Re8","Bd7","Rxa8","Rxa8","Nd1","Ng5","Qe2","Re8","Qf1","Bxb2","Rxe8+","Bxe8","Nxb2"],
+    "details": "White: Steinitz, Wilhelm ; Black: Zukertort, Johannes H ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Zukertort, Johannes H vs Steinitz, Wilhelm (1886)",
+    "moves": ["d4","d5","c4","e6","Nc3","Nf6","Nf3","dxc4","e3","c5","Bxc4","cxd4","exd4","Be7","O-O","O-O","Qe2","Nbd7","Bb3","Nb6","Bf4","Nbd5","Bg3","Qa5","Rac1","Bd7","Ne5","Rfd8","Qf3","Be8","Rfe1","Rac8","Bh4","Nxc3","bxc3","Qc7","Qd3","Nd5","Bxe7","Qxe7","Bxd5","Rxd5","c4","Rdd8","Re3","Qd6","Rd1","f6","Rh3","h6","Ng4","Qf4","Ne3","Ba4","Rf3","Qd6","Rd2","Bc6","Rg3","f5","Rg6","Be4","Qb3","Kh7","c5","Rxc5","Rxe6","Rc1+","Nd1","Qf4","Qb2","Rb1","Qc3","Rc8","Rxe4","Qxe4"],
+    "details": "White: Zukertort, Johannes H ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Zukertort, Johannes H (1886)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","O-O","Nxe4","Re1","Nd6","Nxe5","Be7","Bd3","O-O","Nc3","Nxe5","Rxe5","c6","b3","Re8","Ba3","Bf8","Re3","Rxe3","fxe3","Ne4","Bxf8","Nxc3","Qh5","g6","Qe5","Qxf8","Qxc3","Qg7","Qxg7+","Kxg7","e4","d6","Re1","Bd7","Kf2","Re8"],
+    "details": "White: Steinitz, Wilhelm ; Black: Zukertort, Johannes H ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Zukertort, Johannes H vs Steinitz, Wilhelm (1886)",
+    "moves": ["e4","e5","Nf3","Nc6","Nc3","Nf6","Bb5","Bb4","O-O","O-O","Nd5","Nxd5","exd5","e4","dxc6","exf3","Qxf3","dxc6","Bd3","Bd6","b3","Qg5","Bb2","Qxd2","Bc1","Qa5","Bf4","Be6","Rae1","Rfe8","Re3","Bd5","Bxh7+","Kxh7","Qh5+","Kg8","Rh3","f6","Qh7+","Kf7","Qh5+","Kf8","Qh8+","Kf7","Qh5+","Kf8","Qh8+","Kf7","Qh5+","Kf8","Qh8+","Kf7","Qh5+","Kf8","Qh8+","Kf7","Qh5+","Kf8","Qh8+","Kf7","Qh5+","Ke7","Re3+","Kf8","Qh8+","Bg8","Bh6","Re7","Rxe7","Kxe7","Bxg7","Qf5","Re1+","Kf7","Bh6","Qh7","Qxh7+","Bxh7","c4","a5","Be3","c5","Rd1","a4"],
+    "details": "White: Zukertort, Johannes H ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Zukertort, Johannes H (1886)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","O-O","Nxe4","Re1","Nd6","Nxe5","Be7","Bxc6","dxc6","Qe2","Be6","d3","Nf5","Nd2","O-O","c3","Re8","Ne4","Qd5","Bf4","Rad8","d4","Nd6","Nc5","Bc8","Ncd3","f6","Nb4","Qb5","Qxb5","Nxb5","Ned3","Bf5","a4","Nd6","a5","Nb5","a6","Bxd3","Nxd3","b6","Re3","Kf7","Rae1","Rd7","Nb4","g5","Bg3","f5","f4","c5","Nc6","cxd4","cxd4","Kf8","Re5","Nxd4","Nxd4","Rxd4","Rxf5+","Kg7","fxg5","Bc5","Rxc5","Rxe1+","Bxe1","bxc5","Bc3","Kg6","Bxd4","cxd4","h4","Kf5","Kf2","Ke4","Ke2","c5","b3","Ke5","Kd3","Kf4","b4"],
+    "details": "White: Steinitz, Wilhelm ; Black: Zukertort, Johannes H ; Score: 1-0"
+  },
+  {
+    "name": "Zukertort, Johannes H vs Steinitz, Wilhelm (1886)",
+    "moves": ["d4","d5","c4","e6","Nc3","Nf6","Bf4","c5","e3","cxd4","exd4","dxc4","Bxc4","Nc6","Nf3","Be7","O-O","O-O","Re1","Bd7","Qe2","Qa5","Nb5","a6","Bc7","b6","Nc3","Rfc8","Bf4","b5","Bb3","Qb6","Red1","Na5","Bc2","Nc4","Bd3","Nd6","Ne5","Be8","Bg5","Qd8","Qf3","Ra7","Qh3","h6","Be3","Rac7","d5","b4","Ne2","Nxd5","Bxa6","Ra8","Bd3","Bf6","Bd4","Nb5","Nf3","Nxd4","Nfxd4","Ra5","Qf3","Ba4","Re1","Ne7","Qe4","g6","b3","Be8","Bc4","Nf5","Nxe6","fxe6","Bxe6+","Kg7","Rad1","Qe7","Nf4","Re5","Qb1","Rxe1+","Rxe1","Bc3","Nd5","Qc5","Nxc7","Qxc7","Rd1","Nd4","Bc4","Bc6","Qd3","Ba8","Qe3","Qd6","a3","Bc6","axb4","Qf6","Kf1","Nb5","Qe6","Qxe6","Bxe6","Bxb4","Bd7","Nc3","Rd4","Bxd7","Rxd7+","Kf6","Rd4","Be7","b4","Ke5","Rc4","Nb5","Rc6","Bd6","Rb6","Nd4","Rb7","g5","b5","Kd5","b6","Kc6","Rh7","Kxb6","Rxh6","Kc7","h4","gxh4","Rxh4","Nf5","Rh7+","Kd8","g4","Ne7","Kg2","Ke8","Kf3","Bc5","Rh5","Bd4","Kg3","Kf7","f4","Bc3","Rb5","Be1+","Kf3","Bc3","g5","Ba1","Kg4","Bc3","f5","Bd4","Rb7","Bc3","Kh5","Bd4","Kh6","Bg7+","Kh7","Be5","g6+","Kf8","Rxe7"],
+    "details": "White: Zukertort, Johannes H ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Zukertort, Johannes H (1886)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","O-O","Nxe4","Re1","Nd6","Nxe5","Be7","Bd3","O-O","Nc3","Nxe5","Rxe5","c6","b3","Ne8","Bb2","d5","Qf3","Bf6","Re2","Nc7","Ba3","Re8","Rae1","Ne6","Na4","Bd7","Nc5","Nxc5","Rxe8+","Bxe8","Bxc5","b6","Ba3","Bd7","Qg3","c5","c3","Be6","Bb2","Qd7","Bc2","Re8","h3","b5","d4","cxd4","cxd4","Rc8","Bd3","Bf5","Bxf5","Qxf5","Qg4","Qxg4","hxg4","h6","Re2","b4","g3","a5","Kf1","a4","bxa4","Ra8","Re1","Rxa4","Ra1","Kf8","Ke2","Ke7","Kd3","Ra6","a3","bxa3","Rxa3","Rxa3+","Bxa3+","Kd7","Bf8","Ke8","Bd6","g6","Be5","Bd8","Bg7","h5","gxh5","gxh5","Be5","Kd7"],
+    "details": "White: Steinitz, Wilhelm ; Black: Zukertort, Johannes H ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Zukertort, Johannes H vs Steinitz, Wilhelm (1886)",
+    "moves": ["d4","d5","c4","e6","Nc3","Nf6","Bg5","c5","cxd5","exd5","Bxf6","gxf6","e3","Be6","Qb3","Qd7","Bb5","Nc6","e4","O-O-O","exd5","Bxd5","Nxd5","Qxd5","Qxd5","Rxd5","Bxc6","bxc6","dxc5","Bxc5","Nf3","Re8+","Kf1","Bb6","g3","Rf5","Kg2","Re2","Rhf1","Rxb2","a4","Rc5","Ng1","Ra5","Ra3","Kb7","Nh3","Bd4","Re1","Re5","Rd1","c5","Rf3","Ree2","Rf1","Rb6","Nf4","Ra2","Nd5","Re6","Nf4","Rd6","Rb1+","Kc6","Rb8","Rxa4","Rh8","Ra2","Rxh7","a5","Rxf7","a4","h4","Rd7","Rxd7","Kxd7","h5","Ke7","h6","Kf7","h7","Kg7","Ne6+","Kxh7","Nxd4","cxd4","Rd3","Rb2","Rxd4","a3","Ra4","a2","g4","Kg6","Kg3","Kf7","f4"],
+    "details": "White: Zukertort, Johannes H ; Black: Steinitz, Wilhelm ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Zukertort, Johannes H (1886)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","d3","d6","c3","g6","d4","Bd7","Nbd2","Bg7","dxe5","Nxe5","Nxe5","dxe5","Qe2","O-O","Bd3","Qe7","f3","Bc6","Nb3","a5","Be3","Nd7","h4","a4","Nd2","h6","h5","g5","Nf1","Nc5","Bc2","Rfd8","Ng3","Bd7","O-O-O","c6","Rd2","Be6","Nf5","Bxf5","exf5","Rxd2","Qxd2","Nd7","g4","Nf6","Be4","Rd8","Qc2","Nd5","Bf2","b5","a3","Bf8","Rd1","Qb7","c4","bxc4","Qxc4","Rb8","Rd2","Nb6","Qc3","Nd5","Qc4","Nb6","Qd3","Be7","Rc2","Nd5","Qc4","Bxa3","bxa3","Qb1+","Kd2","Rd8","Bxd5","Rxd5+","Ke3","Rb5","Qxc6","Rb3+","Ke2","Kh7","f6","Rb2","Rxb2","Qxb2+","Kf1","Qxa3","Qe8"],
+    "details": "White: Steinitz, Wilhelm ; Black: Zukertort, Johannes H ; Score: 1-0"
+  },
+  {
+    "name": "Zukertort, Johannes H vs Steinitz, Wilhelm (1886)",
+    "moves": ["d4","d5","c4","e6","Nc3","Nf6","Bg5","Be7","Nf3","O-O","e3","dxc4","Bxc4","Nbd7","O-O","c5","Qe2","h6","Bh4","Nb6","dxc5","Bxc5","Rfd1","Nbd7","e4","Be7","e5","Ne8","Bg3","Qb6","a3","a5","Rac1","Nc5","Bf4","Bd7","Be3","Bc6","Nd4","Rd8","Ndb5","Rxd1+","Rxd1","Bxb5","Nxb5","Qc6","b4","axb4","axb4","Nd7","Nd4","Qe4","Nxe6","Nxe5","Nxf8","Nxc4","Nd7","Bxb4","Qd3","Qg4","h3","Qe6","Rb1","Nxe3","Qxe3","Qxd7","Rxb4","Qd1+","Kh2","Qd6+","Qf4","Kf8","Qxd6+","Nxd6","Kg3","Ke7","Kf4","Ke6","h4","Kd5","g4","b5","Rb1","Kc5","Rc1+","Kd5","Ke3","Nc4+","Ke2","b4","Rb1","Kc5","f4","Na3","Rc1+","Kd4","Rc7","b3","Rb7","Kc3","Rc7+","Kd4","Rb7","Kc3"],
+    "details": "White: Zukertort, Johannes H ; Black: Steinitz, Wilhelm ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Zukertort, Johannes H (1886)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","d3","d6","c3","g6","d4","Bd7","Nbd2","Bg7","dxe5","Nxe5","Nxe5","dxe5","Qe2","O-O","f3","a5","Bd3","Qe7","Nf1","Be6","g4","Rfd8","h4","Qd7","Bc2","h5","g5","Ne8","Ne3","Qc6","c4","Nd6","Bd3","Rab8","Nd5","Bxd5","cxd5","Qd7","Bd2","Ra8","Rc1","c6","Rc5","cxd5","Rxd5","Qa4","a3","b6","Bc3","Qe8","Qf2","Nc8","Bb5","Qe7","Rxd8+","Qxd8","O-O","Na7","Bc4","Nc6","Bd5","Rc8","f4","Qd7","f5","Ne7","Ba2","gxf5","exf5","Bf8","Qf3","e4","Qxh5"],
+    "details": "White: Steinitz, Wilhelm ; Black: Zukertort, Johannes H ; Score: 1-0"
+  },
+  {
+    "name": "Zukertort, Johannes H vs Steinitz, Wilhelm (1886)",
+    "moves": ["d4","d5","c4","e6","Nc3","Nf6","Bg5","Be7","Nf3","O-O","c5","b6","b4","bxc5","dxc5","a5","a3","d4","Bxf6","gxf6","Na4","e5","b5","Be6","g3","c6","bxc6","Nxc6","Bg2","Rb8","Qc1","d3","e3","e4","Nd2","f5","O-O","Re8","f3","Nd4","exd4","Qxd4+","Kh1","e3","Nc3","Bf6","Ndb1","d2","Qc2","Bb3","Qxf5","d1=Q","Nxd1","Bxd1","Nc3","e2","Raxd1","Qxc3"],
+    "details": "White: Zukertort, Johannes H ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Zukertort, Johannes H (1886)",
+    "moves": ["e4","e5","Nc3","Nc6","f4","exf4","d4","d5","exd5","Qh4+","Ke2","Qe7+","Kf2","Qh4+","g3","fxg3+","Kg2","Nxd4","hxg3","Qg4","Qe1+","Be7","Bd3","Nf5","Nf3","Bd7","Bf4","f6","Ne4","Ngh6","Bxh6","Nxh6","Rxh6","gxh6","Nxf6+","Kf7","Nxg4"],
+    "details": "White: Steinitz, Wilhelm ; Black: Zukertort, Johannes H ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1889)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","Nge7","Ng5","Nd8","f4","exd4","cxd4","Bb6","Be3","d5","Bxd5","Nxd5","exd5","O-O","Nc3","Re8","Nge4","Qg6","Bf2","c6","Re1","Bd7","Nc5","Rxe1+","Qxe1","Qd6","Qe3","cxd5","Nxd7","Qxd7","Nxd5","Nc6","Nxb6","axb6","Re1","h6","d5","Nb4","Rd1","Nxd5","Qe5","Rxa2","Rxd5","Ra1+","Qxa1","Qxd5","Bxb6","Qe4","g3","h5","Qd4","Qf3","Qe3","Qd1+","Kg2","Qc2+","Qf2","Qc6+","Kg1","h4","Qc5","hxg3","hxg3","Qe4","Kf2","Qh1","Qc8+","Kh7","Qg4","Qh2+","Kf1","Qh1+","Bg1","Qd5","Qh3+","Kg8","Qc8+","Kh7","Qc5","Qd3+","Kg2","Qd7","Bd4","f6","Kf3","b5","g4","Qb7+","Kg3","b4","Qf5+","Kg8","g5","fxg5","Qe6+","Kh7","fxg5","Qc7+","Kg4","g6","Qf6","Qc8+","Kh4"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1889)",
+    "moves": ["Nf3","d5","d4","Bg4","Ne5","Bh5","Qd3","Qc8","c4","f6","Nf3","e6","Nc3","Bg6","Qd1","c6","e3","Bd6","Bd2","Ne7","Rc1","Nd7","Nh4","f5","g4","Nf6","h3","Ne4","Bd3","fxg4","Nxg6","Nxg6","Bxe4","dxe4","Nxe4","Be7","hxg4","e5","d5","Qd7","Bc3","Rd8","Rh5","cxd5","cxd5","O-O","d6","Qe6","Qb3","Qxb3","axb3","Bxd6","Nxd6","Rxd6","Bb4","Rb6","Bxf8","Kxf8","Rc8+","Kf7","Rc7+","Kf6","Rf5+","Ke6","Rff7","Rb4","Rxb7","Rxg4","Rxg7","h5","Rxa7","Kf5","f3","Rg2","Ra6"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1889)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","d6","d4","Bd7","dxe5","dxe5","O-O","Bd6","Nc3","Nge7","Bg5","f6","Be3","O-O","Bc4+","Kh8","Nb5","Nc8","Qd2","Qe8","Rad1","Bg4","Be2","Nd8","c4","Ne6","h3","Bh5","c5","Be7","Qd5","Qc6","Bc4","Be8","a4","Nxc5","Bxc5","Bxc5","Qxc6","Bxc6","Nxc7","Nd6","Bb3","Bxe4","Nxa8","Bxf3","gxf3","Rxa8","Rd5","b6","Rfd1","Rd8","Kg2","a5","Bc2","g6","h4","Kg7","f4","exf4","Kf3","f5","Kxf4","Kf6","Bb3","h6","h5","gxh5","Bc2","Ke7","Re5+","Kf8","Rxf5+","Ke7","Re5+","Kd7","f3","h4","Kg4","Rg8+","Kxh4","Rg2","Bf5+","Kc6","b3","Bf2+","Kh3","Rg3+","Kh2","Rxf3","Kg2","Rf4","Be6","Bc5","Bd5+","Kd7","Re6","Nf5","Bc4+","Kc7","Rd3","h5","Bb5","Rg4+","Kh2","Rh4+","Rh3","Bd6+","Kg2","Rg4+","Kf1","Ng3+","Kf2","h4","Rh6","Rf4+","Kg2","Be7","Rc6+","Kb7","Rc4","Rf8","Rd4","Kc8","Rd7","Bd8","Rh2","Ne4","Rg7","Nc5","Rh3","Bf6","Rg6","Bd8","Bc4","Rf4","Rf3","Rd4","Rg7","Kb8","Rff7","Rd6","Kh3","Rd2","Rh7","Rd6","Bf1","Ne6","Rd7","Rc6","Kg4","Rc7","Bc4","Rxc4+","bxc4","Kc8","Rd6","Nc5","Rc6+","Kb8","Rh8"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1889)",
+    "moves": ["Nf3","d5","d4","Bg4","c4","Bxf3","gxf3","e6","cxd5","Qxd5","e4","Bb4+","Nc3","Qa5","Bd2","Nc6","d5","exd5","a3","Nd4","Bd3","O-O-O","axb4","Nxf3+","Qxf3","Qxa1+","Ke2","Qxb2","Rb1","Qa3","Nb5","Qa6","Qxf7","Qb6","Rc1","Nh6","Qxg7","dxe4","Qxc7+","Qxc7","Rxc7+","Kb8","Bxe4"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1889)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","Nge7","Bg5","Qd6","Qb3","O-O","Rd1","Bb6","dxe5","Qg6","Qa3","Re8","Nbd2","d6","exd6","cxd6","Bf4","Bc5","Qc1","Bg4","Bg3","Rad8","h3","Bxf3","Nxf3","Qxg3","Kh1","Qg6","Rd3","Qf6","Qd2","Ng6","Ng5","Nce5","Rf3","Nxf3","Bxf7+","Qxf7","gxf3","Qc4"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1889)",
+    "moves": ["Nf3","d5","d4","Bg4","c4","Bxf3","gxf3","dxc4","e4","e5","dxe5","Qxd1+","Kxd1","Nc6","f4","Rd8+","Bd2","Bc5","Rg1","Nge7","Bxc4","Ng6","Kc1","Bxf2","Rg2","Bb6","Nc3","Nd4","Nd5","Nf3","Nxb6","Nxd2","Rxd2","axb6","Rxd8+","Kxd8","Bxf7","Nxf4","Kd2","Rf8","Bb3","Ng6","e6","Ke7","Rg1","Rf2+","Ke3","Rxh2","Rg5","Rh3+","Kd4","Rf3","Rb5","Nf4","a4","h5","a5","h4","axb6","c6","Rf5","Ne2+","Kc5","Rxf5+","exf5","h3","Ba4","h2","Bxc6","bxc6","b7","h1=Q","b8=Q","Qc1+"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 0-1"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1889)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","Nge7","Bg5","Qd6","d5","Nd8","Qa4","Bb6","Na3","Qg6","Bxe7","Kxe7","Nxe5","Qf6","Nf3","Qxc3","e5","c6","d6+","Kf8","Bb3","h6","Qh4","g5","Qh5","Qd3","Rad1","Qh7","Nc2","Kg7","Ncd4","Qg6","Qg4","h5","Nf5+","Kf8","Qxg5","Qxg5","Nxg5","h4","Kh1","Rh5","f4","Ne6","g4","hxg3","Nxg3","Rh6","Nxf7","Kxf7","f5","Ke8","fxe6","dxe6","Ne4"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1889)",
+    "moves": ["Nf3","Nf6","d4","d5","c4","e6","Nc3","c6","e3","Bd6","Bd3","Nbd7","O-O","O-O","e4","dxe4","Nxe4","Nxe4","Bxe4","h6","Bc2","Re8","Re1","Qf6","Bd2","Nf8","Bc3","Bd7","c5","Bb8","d5","Qd8","d6","b6","b4","f6","Qd3","a5","a3","e5","Nh4","bxc5","bxc5","Ba7","Rad1","Bxc5","Qc4+","Ne6","Qe4","Nf8","Qc4+","Ne6","Bg6","Qb6","Re2","Reb8","Rb2","Qa7","Bf5","Kf7","Re2","Qa6","Qg4","Nf4","Rxe5","fxe5","Bxe5","g5","Bg6+","Kf8","Qxd7","Qa7","Qf5+","Kg8","d7"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1889)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","Nge7","Bg5","Qd6","d5","Nd8","Qa4","b6","Na3","a6","Bb3","Bxc3","Rac1","Qb4","Nb5","Qxb5","Qxb5","axb5","Rxc3","c5","dxc6","Ndxc6","Bxe7","Kxe7","Bd5","f6","Bxc6","dxc6","Rxc6","Bd7","Rxb6","Rhb8","Rxb8","Rxb8","Rb1","Bc6","Re1","Ra8","Re2","Ra4","Rb2","Rxe4","h3","Kd6","Nd2","Ra4","f3","f5","Kf2","Ra3","Nb1","Rd3","Ke2","e4","Nd2","Ra3","fxe4","fxe4","Nb1","Rg3","Kf2","Rd3","Ke2","h5","Nd2","Rg3","Kf2","Ra3","Nf1","Bd5","Rxb5","Rxa2+","Ke3","Rxg2","Kd4","Bc6","Rxh5","Ra2","Ne3","Rd2+","Kc4","Bd7","Rg5","Be6+","Kb4","Rd4+","Kb5","Rd3","Nc4+","Bxc4+","Kxc4","Rd1","Rxg7","e3","Rb7","Ke5","Kc3","Ke4","Kc2","Rf1"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1889)",
+    "moves": ["Nf3","d5","d4","Bg4","c4","Nc6","e3","e5","Qb3","Bxf3","gxf3","exd4","cxd5","Ne5","exd4","Nd7","Nc3","Qe7+","Be3","Qb4","Qc2","Ngf6","Bb5","Rd8","O-O-O","a6","Ba4","Be7","Rhg1","g6","Bh6","b5","Bb3","Nb6","Rge1","Kd7","Bf4","Rc8","a3","Qa5","Bg5","Ng8","Bxe7","Nxe7","Ne4","Rb8","Nf6+","Kd8","Rxe7","Kxe7","Qxc7+","Nd7","Qxa5"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1889)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","Nge7","Bg5","Qd6","d5","Nd8","Qa4","b6","Na3","a6","Bd3","Bxc3","Rab1","Bb7","Nc4","Qc5","Be3","b5","Bxc5","bxa4","Rfc1","d6","Bxd6","cxd6","Nxd6+","Kd7","Nxb7","Bd4","Nxd4","exd4","Nxd8","Rhxd8","Rb7+","Kd6","e5+","Kxd5","Rxe7","Rac8","Rxc8","Rxc8","f3","Rc3","Be4+","Kc4","Rxf7","Kb4","e6","d3","Rd7"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1889)",
+    "moves": ["Nf3","d5","d4","Bg4","c4","Nc6","e3","e6","Nc3","Bb4","Bd2","Nge7","Bd3","Bf5","Bxf5","Nxf5","cxd5","exd5","Qb3","Bxc3","Bxc3","Rb8","O-O","O-O","Rac1","Re8","Bd2","Nce7","Rc2","c6","Rfc1","Ng6","Be1","Nfh4","Nxh4","Nxh4","f3","Nf5","Bf2","Qg5","Re1","Re6","e4","Rbe8","Rce2","Nd6","e5","Qd8","Kf1","Nc4","Qxb7","Qg5","Qb4","Rg6","Bg3","h5","b3","Nb6","Qd2","Qf5","Qc2","Qg5","Qd2","Qf5","Kg1","Nc8","Qc2","Qd7","Bh4","Nb6","Qd3","Na8","f4","Nc7","Bf2","Qg4","Be3","f5","Rf2","Rge6","Qe2","Qg6","Rf3","Qf7","Rg3","Kh7","Bf2","Rh6","Rc1","Rc8","Rgc3","Ne6","Qa6","Rg8","Rxc6","Nxf4","Rxh6+","gxh6","Bg3","Rg6","Qf1","Ne6","Qd3","Rg4","h3","Rxd4","Qa6","Rd2","Be1","Rd4","Rc6","Re4","Rxe6","Rxe1+","Kh2","Rc1","Rf6","Qg7","Qe6","Rf1","Rf7"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1889)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","Nge7","d5","Nd8","Bg5","Qd6","Qa4","f6","Bc1","Bb6","Na3","c6","Bb3","Bc5","Rd1","b5","Qa5","Nb7","Qa6","Nd8","Qa5","Nb7","Qa6","Nd8","Qa5","Nb7","Qa6","Qc7","dxc6","dxc6","Nxb5","cxb5","Qxb5+","Bd7","Bf7+","Kd8","Rb1","Nd6","Qb3","Qb6","Qc2","Qc6","Bb3","a5","Be3","Bxe3","fxe3","a4","Bd5","Nxd5","Rxd5","Re8","Rbd1","Re6","c4","Ra7","c5","Nc8","Nd2","Ke8","Nc4","Re7","Qe2","a3","Qh5+","g6","Qh4","Ra4","Rd6","Nxd6","Nxd6+","Kd8","Qxf6","Ra5","Qf8+","Re8","Nxe8","Qxc5","Qxc5","Rxc5","Nf6","Rc7","Kf1","Kc8","Rxd7","Rxd7","Nxd7","Kxd7","Ke2","Kc6","Kd3","Kb5","Kc3","h5","Kb3","g5","Kxa3","Kc4","Kb2","Kd3","a4","Ke2","a5","Kf2","a6","Kxg2","a7","Kxh2","a8=Q","h4","Qg8","h3","Qxg5","Kh1","Qxe5"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1889)",
+    "moves": ["Nf3","d5","d4","Bg4","c4","Nc6","e3","e5","Qb3","Bxf3","gxf3","Nge7","Nc3","exd4","Nxd5","Rb8","e4","Ng6","Bd2","Bd6","f4","O-O","O-O-O","Nce7","f5","Nxd5","cxd5","Nf4","Qf3","Qh4","Rg1","h5","Kb1","c5","Qg3","Ng6","Qxd6","Qxe4+","Ka1","Qxf5","Qg3","Qxd5","f4","b5","Bg2","Qd6","Qg5","f5","Bh3","Rb6","Bxf5","Rf6","Be4","Qd7","Qxh5","Nf8","Qxc5","Ne6","Qh5","Qd6","Qh7+","Kf8","Rc1","Ra6","f5","Nc5","Qh8+","Ke7","Rxg7+"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1889)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","Nge7","d5","Nd8","Qa4","Bb6","Bg5","Qd6","Na3","c6","Rad1","Qb8","Bxe7","Kxe7","d6+","Kf8","Nxe5","f6","Nf3","Bc5","e5","b5","Bxb5","cxb5","Nxb5","Ne6","exf6","gxf6","Qh4","Kf7","Qh5+","Kg8","Qg4+","Kf7","Qh5+","Kg7","Nfd4","Bxd4","Nxd4","Rf8","Rd3","Bb7","Nxe6+","dxe6","Rh3","Be4","Qg4+","Bg6","Qxe6","Qb6","Qd5","Rad8","Rd1","Rfe8","c4","Rxd6","Qf3","Rd3","Qg4","Re4"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1889)",
+    "moves": ["Nf3","f5","d4","e6","c4","Nf6","e3","Be7","Nc3","O-O","Bd3","d5","Bd2","c6","c5","Nbd7","Ng5","Nb8","f3","Qc7","Qc2","Nh5","Nh3","Bh4+","Nf2","e5","dxe5","Qxe5","O-O","Be7","Ne2","b6","cxb6","axb6","Nd4","c5","Nb5","Nc6","Bc3","Qb8","Rfd1","Ne5","Be2","Nf6","Nh3","Rd8","Bf1","Nf7","Nf4","d4","Bd2","dxe3","Bxe3","Rxd1","Rxd1","Qe5","Re1","Kf8","Bd2","Qb8","Qb3","Nd8","Qe3","Qb7","Bc4","Qd7","Bc3","Ra4","Bb3","Ra8","Nd5","Nxd5","Bxd5","Ra4","Bxg7+","Kxg7","Qxe7+","Qxe7","Rxe7+","Kf6","Rxh7","Rb4","Nd6","Be6","Bxe6","Kxe6","Rh6+","Ke5","b3","b5","f4+","Kd4","Nxb5+","Rxb5","Rd6+","Kc3","Rxd8","Ra5","Rd5","Kb4","Rd2","Kc3","Re2"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1889)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","Nge7","d5","Nd8","Qa4","Bb6","Bg5","Qd6","Na3","c6","Rad1","Qb8","Bxe7","Kxe7","d6+","Kf8","Qb4","f6","Bb3","g6","Nc4","Kg7","a4","Nf7","Nxb6","axb6","Bxf7","Kxf7","Nxe5+","Kg7","Nc4","b5","axb5","Qa7","b6","Qa4","Qc5","Re8","f3","Qa2","Ne3","Qb3","Rb1","Qf7","Nc4","Ra4","Rb4","Ra2","Qd4","Kg8","Ne3","Ra3","Ra4","Rb3","Rfa1","Kg7","Ra8","Rb5","Rb8","c5","Qd5","Rxb6","Raa8","Qf8","Nc4","Rc6","f4","b5","Rxb5","Ba6","Rxe8","Qxe8","Rxc5","Rxc5","Qxc5","Qxe4","Ne3","Qxf4","h3","Bb7","c4","Bc6","Qa3","Qd4","Kh2","f5","c5","f4","Nc2","Qe5","Qa1","Qxa1","Nxa1","Kf6","Nc2","Ke5","Nb4","Bb7","Kg1","Kd4","c6","Bc8","cxd7","Bxd7","Kf2","Ke5","Nd3+","Kxd6","Nxf4","Ke5","Ke3","Kf6","Nd3","h6","Kf4","g5+","Ke3","h5","Nc5","Bc6","g3","h4","g4","Bg2","Ne4+","Bxe4","Kxe4","Ke6"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Gunsberg, Isidor A (1890)",
+    "moves": ["d4","d5","c4","e6","Nc3","Nf6","f3","Nc6","e3","Be7","Nh3","O-O","Nf2","Re8","Be2","Bb4","Bd2","e5","dxe5","Rxe5","cxd5","Nxd5","e4","Nxc3","bxc3","Ba5","Qc2","Re8","O-O","Bb6","Kh1","Qe7","Nd3","Ne5","Nxe5","Qxe5","Bd3","Rd8","Rad1","Be6","Bc1","Qa5","c4","Bd4","Bd2","Qh5","Bc1","c6","Be2","Qa5"],
+    "details": "White: Steinitz, Wilhelm ; Black: Gunsberg, Isidor A ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Gunsberg, Isidor A vs Steinitz, Wilhelm (1890)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","d6","c3","Bd7","O-O","Nge7","d4","Ng6","d5","Nb8","Bxd7+","Nxd7","Na3","Be7","Nc2","Nc5","Qe2","Qd7","b4","Na4","Bd2","O-O","c4","f5","exf5","Qxf5","Rac1","Rae8","Nfe1","Bg5","g3","Nc3","Bxc3","Bxc1","Ng2","Qf3","Qxf3","Rxf3","Nge3","Bxe3","Nxe3","Ref8","Kg2","c6","Bb2","cxd5","Nxd5","Rd3","Bc1","b5","Ne3","bxc4","Nxc4","Rd4","Ne3","Rxb4","Rd1","Rb1","Ba3","Rxd1","Nxd1","Rd8","f3","d5","Nc3","d4","Ne4","Rb8","h4","h5","Kf2","Rb1","Bd6","Rb2+"],
+    "details": "White: Gunsberg, Isidor A ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Gunsberg, Isidor A (1890)",
+    "moves": ["d4","d5","c4","e6","Nc3","c6","e3","Nf6","f3","Bb4","Nh3","Nbd7","Nf4","O-O","Be2","dxc4","Bxc4","e5","Ne2","exd4","exd4","Nb6","Bb3","Bf5","Bg5","Be7","O-O","Nfd5","Bxe7","Nxe7","Ng3","Bg6","Nce4","Nbd5","Qd2","b6","Rae1","Qd7","Re2","Rad8","Rfe1","Nf5","Nc3","Nxg3","hxg3","Nxc3","bxc3","Rfe8","Qf4","Rxe2","Rxe2","Kf8","Kf2","Qd6"],
+    "details": "White: Steinitz, Wilhelm ; Black: Gunsberg, Isidor A ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Gunsberg, Isidor A vs Steinitz, Wilhelm (1890)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","d3","Nf6","Be3","Bxe3","fxe3","d6","O-O","Na5","Bb5+","c6","Ba4","Qb6","Qd2","Ng4","Re1","Qa6","c3","f6","Bc2","c5","b4","cxb4","cxb4","Nc6","Bb3","Qb6","a3","Bd7","Nc3","Ne7","h3","Nh6","d4","Rd8","Rf1","Rf8","Qf2","Rc8","Rac1","Qa6","a4","Qb6","b5","Qa5","Qb2","Nf7","Nd2","exd4","exd4","Qb6","Ne2","d5","exd5","Nd6","Qa3","Kd8","a5","Nxb5","Qxe7+","Kxe7","axb6","axb6","Nc4","Ra8","Ra1","Nd6","Nxb6","Rxa1","Rxa1","Bb5","Nf4","Kf7","Ne6","Re8","Ba4","Bxa4","Rxa4","g6","Nc4","Nf5","Rb4","Re7","g4","Ng3","Nd6+","Kg8","Nxb7","Rd7","Nbc5","Rxd5","Kf2","Nf5","gxf5","Rxf5+","Kg3","h5","Rb7","g5","Ne4","Kh8","Rg7","h4+","Kg2","Ra5","Nxf6","Ra2+","Kg1"],
+    "details": "White: Gunsberg, Isidor A ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Gunsberg, Isidor A (1890)",
+    "moves": ["d4","d5","c4","dxc4","e3","e5","dxe5","Qxd1+","Kxd1","Nc6","Bxc4","Nxe5","Bb5+","c6","Be2","Be6","Nc3","O-O-O+","Kc2","Nf6","Nf3","Neg4","Rf1","Bf5+","Kb3","Nd7","e4","Nc5+","Kc2","Nxe4","Nh4","Nxc3+","Kxc3","Be6","f4","Nf6","f5","Bd5","g4","Be7","Kc2","Be4+","Kb3","Nd7","g5","f6","Bg4","Nc5+","Ka3","Rd3+"],
+    "details": "White: Steinitz, Wilhelm ; Black: Gunsberg, Isidor A ; Score: 0-1"
+  },
+  {
+    "name": "Gunsberg, Isidor A vs Steinitz, Wilhelm (1890)",
+    "moves": ["d4","d5","e3","e6","Bd3","c5","b3","Nc6","Nf3","Nf6","O-O","Bd7","Bb2","Rc8","c3","Bd6","Nbd2","e5","dxe5","Nxe5","Nxe5","Bxe5","Nf3","Bb8","h3","c4","Bc2","O-O","Qd4","Re8","Rad1","b5","b4","Qc7","Rfe1","Re7","Kf1","Rce8","Qh4","Qd6","Rd4","Qc6","Red1","Be5","Rxd5","Bb8","a4","a6","a5","h6","R5d4","Qb7","Ne1","Be5","R4d2","Bc7","Re2","Re5","f3","Rxe3","Rxe3","Rxe3","Bc1","Re5","Qf2","Qc6","Be3","Re8","Qd2","Qe6","Bd4","Nh5","Bf2","Bc6","Bb1","Qe5","Nc2","Bxf3","gxf3","Qh2","Qd7","Qh1+","Bg1","Qxf3+","Bf2","Ng3+"],
+    "details": "White: Gunsberg, Isidor A ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Gunsberg, Isidor A (1890)",
+    "moves": ["d4","d5","c4","dxc4","Nf3","Nf6","e3","e6","Bxc4","Bb4+","Nc3","O-O","O-O","b6","Ne5","Bb7","Qb3","Bxc3","bxc3","Bd5","Bxd5","exd5","Ba3","Re8","c4","c5","Rac1","Ne4","Rfd1","cxd4","exd4","f6","cxd5","fxe5","d6+","Kh8","Qd5","Nxf2","Rd2","Nd7","Rxf2","Nf6","Rxf6","gxf6","d7","Rg8","dxe5","Rg5","Qxa8","Qxa8","Rc8+","Rg8","Rxa8","Rxa8","e6"],
+    "details": "White: Steinitz, Wilhelm ; Black: Gunsberg, Isidor A ; Score: 1-0"
+  },
+  {
+    "name": "Gunsberg, Isidor A vs Steinitz, Wilhelm (1890)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","d3","Nf6","c3","d6","Be3","Bxe3","fxe3","Qe7","O-O","Nd8","Nbd2","Ne6","d4","Ng4","Qe1","f6","Nh4","Nh6","Nf5","Nxf5","exf5","Nf8","e4","Nd7","Qh4","Nb6","Qh5+","Kd8","Bb3","Bd7","Rae1","c6","Re3","Kc7","Rg3","Raf8","dxe5","dxe5","Qe2","g5","Rd3","Bc8","Rd1","Rd8","Nf1","Nd7","Bc2","Nc5","Rxd8","Rxd8","Rxd8","Kxd8","b4","Nd7","Bb3","a5","a3","axb4","axb4","Qd6","Ne3","b5","Kf2","Kc7","Qd1"],
+    "details": "White: Gunsberg, Isidor A ; Black: Steinitz, Wilhelm ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Gunsberg, Isidor A (1890)",
+    "moves": ["Nf3","Nf6","d4","e6","e3","c5","c4","d5","dxc5","Bxc5","Nc3","Bb4","Bd2","dxc4","Bxc4","O-O","O-O","Nc6","Qe2","Qe7","e4","Bxc3","Bxc3","e5","Qe3","Be6","Be2","Ng4","Qc1","Rac8","h3","Nh6","Qe3","f6","a3","Nf7","b4","a6","a4","Nxb4","Bxb4","Qxb4","Rfb1","Qe7","Rb6","Rc7","Rab1","Rfc8","Ne1","Nd8","Nd3","Qa3","Kh2","Rd7","Rxe6","Nxe6","Bg4","Re8","Bxe6+","Rxe6","Nc5","Qxe3","fxe3","Ree7","Nxd7","Rxd7","Kg3","Kf7","a5","Kg6","Kf3","Rc7","Rb2","Rc5","Ra2","Rb5","Ke2","Kf7","Kf3","Ke6","h4","h5","Ra1","g6","g4","hxg4+","Kxg4","Rb4","Kf3","f5","exf5+","Kxf5","Rh1","Rb5","e4+","Kf6","Rd1","Rxa5","Rd6+","Kg7","Rd7+","Kh6","Rxb7","Ra3+","Kf2","Ra5","Rb6","Kh5","Rc6","Ra4","Kf3","Ra3+","Kf2","Kh6","Re6","Ra5","Kg3","Kg7","Kg4","Kf7","Rb6","Ra1","Rb7+","Kf6","Rb6+","Kg7","Re6","a5","Rxe5","a4","Ra5","a3","Kg5","a2","Ra7+","Kf8","Ra8+","Kf7","Ra7+","Ke6","Ra6+","Ke5","Ra5+","Kxe4","Ra4+","Kf3","Ra3+","Kf2","Kxg6","Rg1+","Kf7","a1=Q","Rxa1","Rxa1","h5","Rh1","Kg6","Rg1+","Kf6"],
+    "details": "White: Steinitz, Wilhelm ; Black: Gunsberg, Isidor A ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Gunsberg, Isidor A vs Steinitz, Wilhelm (1891)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","d3","Nf6","c3","d6","Nbd2","Ne7","Nf1","c6","Qe2","O-O","h3","d5","Bb3","Ng6","g3","dxe4","dxe4","Be6","Ng5","Bxb3","axb3","Qd7","Be3","Bxe3","Qxe3","b6","Nd2","c5","Ngf3","Rad8","Nc4","Rfe8","Ncd2","Re7","Kf1","h5","Kg2","h4","Kh2","Qb5","c4","Qc6","Rac1","Red7","Rc3","Nh5","Rg1","Qf6","Nf1","Rd1","Qe2","hxg3+","fxg3","Ra1","N3d2","Qg5","Rf3","Nf6","Rd3","Rxd3","Qxd3","Nf8","Qe3","Qg6","Rg2","Ne6","Re2","Nd4","Rf2","Ra2","Nf3","Nxf3+","Qxf3","Qxe4","Qxe4","Nxe4","Re2","Ng5","Kg2","Ne6"],
+    "details": "White: Gunsberg, Isidor A ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Gunsberg, Isidor A (1891)",
+    "moves": ["Nf3","d5","d4","Nf6","e3","e6","c4","Be7","Nc3","O-O","Bd3","c5","cxd5","cxd4","Nxd4","Nxd5","Nxd5","Qxd5","O-O","Nc6","Nxc6","Qxc6","Bd2","Bf6","Qb3","Bd7","Rfc1","Qa4","Qxa4","Bxa4","Bc3","Bxc3","Rxc3","Bc6","b4","a6","a4","Rfd8","f3","Kf8","Raa3","h6","Kf2","Rdc8","b5","Bd7","Rxc8+","Rxc8","bxa6","bxa6","a5","Bb5","Bxb5","axb5","Rb3","Rb8","a6"],
+    "details": "White: Steinitz, Wilhelm ; Black: Gunsberg, Isidor A ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Gunsberg, Isidor A vs Steinitz, Wilhelm (1891)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","Nh6","Bg5","Qd6","d5","Nd8","Qa4","Bb6","Na3","c6","Be2","Bc7","Nc4","Qf8","d6","Bxd6","Nb6","Rb8","Qxa7","Ng4","Nh4","Ne6","Bxg4","Nxg5","Nf5","Ne6","Rfd1","Bc7","Na8","Rxa8","Qxa8","Kd8","Rxd7+","Kxd7","Rd1+"],
+    "details": "White: Gunsberg, Isidor A ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Gunsberg, Isidor A (1891)",
+    "moves": ["Nf3","Nf6","d4","e6","e3","Bb4+","c3","Be7","Be2","O-O","O-O","d5","c4","b6","Nc3","Bb7","cxd5","exd5","Ne5","Nfd7","f4","Nxe5","fxe5","c6","Bd2","Ba6","Bxa6","Nxa6","Qa4","Nb8","Rac1","f6","exf6","Bxf6","Ne2","Re8","Rf3","Qe7","Rcf1","Rc8","Bb4","Qe6","Nf4","Qe4","Nh5","Nd7","Qa6","Qe8","Rh3","Bg5","Kh1","Nf6","Nxf6+","gxf6","Qb7","Qg6","Qd7","Kh8","Be7","Rg8","Qxc6","Rac8","Qxd5","Rg7","Bb4","Qd3","Qf3","Rc2","Bc3","Re2","e4","Qxe4","d5","Qg6","Rg3","Rf7","d6","h6","h4"],
+    "details": "White: Steinitz, Wilhelm ; Black: Gunsberg, Isidor A ; Score: 1-0"
+  },
+  {
+    "name": "Gunsberg, Isidor A vs Steinitz, Wilhelm (1891)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","h6","Bb5","Nge7","Ba3","exd4","e5","Qe6","cxd4","Bb4","Bb2","d5","Nc3","O-O","Ne2","Ng6","Qb3","Ba5","Ne1","Nce7","f4","Qb6","Ba3","f5","Qa4","c6","Bd3","Qd8","Qc2","b5","Kh1","Bb6","g4","a5","Rg1","b4","gxf5","Bxf5","Bxf5","Rxf5","Rxg6","bxa3","Rxc6","Nxc6","Qxf5","Nxd4","Nxd4","Bxd4","Qe6+","Kh8","Rd1","Bc3","Rxd5","Qb8"],
+    "details": "White: Gunsberg, Isidor A ; Black: Steinitz, Wilhelm ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Gunsberg, Isidor A (1891)",
+    "moves": ["Nf3","Nf6","d4","e6","e3","b6","c4","Bb7","Nc3","d5","cxd5","Nxd5","Bb5+","c6","Bd3","Be7","e4","Nxc3","bxc3","O-O","O-O","c5","Be3","cxd4","cxd4","Nc6","Rc1","Ba3","Rc3","Bb4","Rc4","Be7","Qa4","Na5","Rc2","Rc8","Rfc1","Rxc2","Rxc2","Qa8","Nd2","Bc6","Bb5","Bxe4","Nxe4","Qxe4","Rc7","Bf6","Rxa7","Nc6","Ra8","Nxd4","Rxf8+","Kxf8","Qa3+","Kg8","Qa6","g5","Bxd4","Bxd4","Bf1","Bc5","Qe2","Qd4","g4","Kg7","Qf3","Qa4","Qc3+","f6","Qc4","Qc6","Qe2","Qd6","Qf3","Qd4","Bd3"],
+    "details": "White: Steinitz, Wilhelm ; Black: Gunsberg, Isidor A ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Gunsberg, Isidor A vs Steinitz, Wilhelm (1891)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","h6","Qa4","Bb6","Bb5","Nge7","Ba3","exd4","e5","Qg6","cxd4","Nd5","Re1","Nf4","g3","Qg4","Nbd2","Nh3+","Kg2","Ng5","Bb2","Ne7","Be2","Ne6","Kh1","Qf5","Nh4","Qxf2","Ne4"],
+    "details": "White: Gunsberg, Isidor A ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Gunsberg, Isidor A (1891)",
+    "moves": ["d4","d5","c4","Nf6","cxd5","Nxd5","e4","Nf6","Nc3","e5","dxe5","Qxd1+","Kxd1","Ng4","Nd5","Kd7","Nh3","c6","Nc3","Nxe5","f4","Ng4","Be2","Ke8","Kc2","Bc5","f5","Ne3+","Kd3","Nxg2","b4","Bxb4","Rg1","Nh4","Rxg7","Ng6","fxg6","hxg6","Ng5","Be7","Rh7","Rxh7","Nxh7","f6","Bf4","Kf7","Rg1","Na6","e5","Bf5+","Kd2","Bb4","Rg3","Nc5","Kc1","Ba3+","Kd1","g5","Bc4+","Ne6","Nxg5+","fxg5","Bxg5","Rg8","h4","b5","Nxb5","cxb5","Bxe6+","Kxe6","Rxa3","Kxe5","Rxa7","Bd3","Kd2","Bf1","Kc3","Rc8+","Kb4","Rg8","Ra5","Ke4","Ra6","Kf3","Rf6+","Kg2","Rf5","Be2","Be3","Bd3","Rf2+","Kg3","Rd2","Rg4+","Kc5","Bc4","h5","Kf3","Bd4","Rg5+","Kb4","Rxh5","a4","Ke4","Bc5","Bd3","axb5","Rh1","Rb2","Kd5","Bf2","Rb1"],
+    "details": "White: Steinitz, Wilhelm ; Black: Gunsberg, Isidor A ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Gunsberg, Isidor A vs Steinitz, Wilhelm (1891)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","Qf6","d4","Nge7","Qa4","Bb6","Bg5","Qd6","Na3","exd4","Nb5","Qg6","cxd4","a6","d5","Ne5","Nxe5","Qxg5","Nf3","Qh6","Bb3","O-O","Rac1","c6","Nbd4","c5","Ne2","d6","Ng3","Bd8","e5","b5","Qa3","c4","exd6","Nxd5","Bc2","b4","Qa4","Qxd6","Be4","Nb6","Qc2","Rb8","Bxh7+","Kh8","Rcd1","Qh6","Bf5","g6","Bxc8","Rxc8","Qb2+","Qg7","Qxb4","Bc7","Rd4","Rfd8","Rh4+","Kg8","Ng5","Rd7","Re4","c3","Rfe1","Rdd8","Ne2","Nd5","Qa4","Qf6","Nf3","Bb6","Rc1","c2","h3","Qb2","Qb3","Qxb3","axb3","a5","Rc4","Rxc4","bxc4","Nb4","g3","Bxf2+","Kxf2","Nd3+","Ke3","Nxc1","Nxc1","Rd1","Ne2","a4","Nfd4","c1=Q+","Nxc1","Rxc1"],
+    "details": "White: Gunsberg, Isidor A ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Gunsberg, Isidor A (1891)",
+    "moves": ["d4","d5","e3","Nf6","c4","e6","Nc3","Be7","Nf3","O-O","Be2","dxc4","Bxc4","c5","O-O","Nc6","dxc5","Bxc5","Qxd8","Rxd8","Bd2","a6","Rac1","Ba7","Rfd1","Bd7","Be1","Ng4","e4","Nce5","Nxe5","Nxe5","Be2","Bc6","Kf1","Bd4","f3","Rd7","Bf2","Rad8","Bxd4","Rxd4","Rxd4","Rxd4","Rd1","Rxd1+","Nxd1","Kf8","Ke1","Ng6","Ne3","Ke7","Kd2","Kd6","Kc3","Kc5","g3","Bb5","b4+","Kb6","Bd1","Kc7","a4","Bd7","f4","Bc6","Kd4","Ne7","Bb3","Be8","Nc4","Nc6+","Kc5","Nd8","Nb6","f6","b5","axb5","axb5","Bg6","Bc2","h5"],
+    "details": "White: Steinitz, Wilhelm ; Black: Gunsberg, Isidor A ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","d6","d4","Bg4","Bb5","exd4","cxd4","Bd7","Bb2","Nce7","Bxd7+","Qxd7","Na3","Nh6","Nc4","Bb6","a4","c6","e5","d5","Nd6+","Kf8","Ba3","Kg8","Rb1","Nhf5","Nxf7","Kxf7","e6+","Kxe6","Ne5","Qc8","Re1","Kf6","Qh5","g6","Bxe7+","Kxe7","Nxg6+","Kf6","Nxh8","Bxd4","Rb3","Qd7","Rf3","Rxh8","g4","Rg8","Qh6+","Rg6","Rxf5+"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","d3","d6","c3","g6","Nbd2","Bg7","Nf1","O-O","Ne3","d5","Qc2","a6","Ba4","dxe4","dxe4","Nd7","O-O","Nc5","Bxc6","bxc6","Rd1","Qe7","b3","Ne6","Nc4","Nf4","Bxf4","exf4","Nd4","c5","Ne2","g5","Re1","Bb7","f3","Rae8","Rad1","g4","Nxf4","Qg5","Nd5","gxf3","Re3","f5","e5","f4","Rxf3","Bxe5","Rf2","f3","Nxe5","Rxe5","c4","Bxd5","cxd5","Rfe8","Rxf3"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","d6","d4","Bg4","Bb5","exd4","cxd4","Bd7","Bb2","Nf6","Na3","O-O","d5","Ne7","Bxf6","gxf6","Bxd7","Qxd7","Nc4","Bb6","Nh4","Kh8","Qf3","f5","Nxb6","axb6","exf5","Ra4","g3","c6","dxc6","bxc6","Rfe1","Nd5","Qh5","Rg8","Kh1","Nf6","Qf3","d5","Re2","d4","Rae1","Qd5","Re7","Kg7","Kg1","Qxf3","Nxf3","Nd5","Rd7","d3","Rd1","Re8"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","d3","d6","c3","g6","Nbd2","Bg7","Nf1","O-O","Ba4","Nd7","Ne3","Nc5","Bc2","Ne6","h4","Ne7","h5","d5","hxg6","fxg6","exd5","Nxd5","Nxd5","Qxd5","Bb3","Qc6","Qe2","Bd7","Be3","Kh8","O-O-O","Rae8","Qf1","a5","d4","exd4","Nxd4","Bxd4","Rxd4","Nxd4","Rxh7+","Kxh7","Qh1+","Kg7","Bh6+","Kf6","Qh4+","Ke5","Qxd4+"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","d6","d4","Bg4","Bb5","exd4","cxd4","Bd7","Bb2","Nf6","Na3","O-O","d5","Nb8","Rc1","Bxb5","Nxb5","Nbd7","Qc2","a6","Nbd4","g6","Ne2","Re8","Ng3","Rc8","Qd3","Qe7","Qa3","Bb6","Qc3","c6","Nd4","Bxd4","Qxd4","cxd5","exd5","Qe5","Qb4","Qxd5","Rcd1","Qxa2","Rxd6","Re6","Bxf6","Nxf6","Qxb7","Rce8","Rdd1","h5","Ra1","Qc4","Rfc1","Qf4","h3","h4","Nf1","Re2","Qf3","Qxf3","gxf3","Nd5","Rc4","Rb2","Rd1","Nb6","Rc6","a5","Ne3","a4","Rd3","Ra8","Ra3","Rd8","f4","Rb5","Kg2","Rd4","Kf3","Rbb4","f5","gxf5","Rf6","Rf4+","Kg2","Rb2","Nd1","Rd2","Rxb6","Rxd1","Ra6","Rd2","Rf3","Rxf3","Kxf3","Rd3+","Kf4","a3","Kxf5"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Nf6","Ng5","d5","exd5","Na5","Bb5+","c6","dxc6","bxc6","Be2","h6","Nh3","Bc5","O-O","O-O","d3","Nd5","c4","Ne7","Kh1","Bxh3","gxh3","Nf5","f4","exf4","Bxf4","Ne3","Bxe3","Bxe3","Nc3","Rb8","Rb1","Qd7","b4","Nb7","b5","Nd8","Bg4","Qd4","Rb3","cxb5","Nxb5","Qc5","Rf5","Qe7","Nc3","Rxb3","axb3","Bd4","Nd5","Qd6","b4","g6","Rf1","Nc6","Qd2","Kg7","Bf3","Rd8","Bg2","Be5","Qe3","Rd7","Re1","f6","b5","Nd4","Qf2","Qb8","Be4","Ne6","Rf1","Rf7","Bxg6","Kxg6","Qf5+","Kg7","Qxe6","Qb7","d4","Bb8","Rg1+","Kf8","Qf5","Bd6","c5","Be7","c6"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","d6","d4","Bd7","Qb3","Qf6","dxe5","dxe5","Rd1","h6","Ba3","Rd8","Nbd2","Bb6","Bd5","Na5","Qb4","c5","Qb2","Ne7","Nb3","Nxb3","Qxb3","O-O","Bxb7","Ng6","c4","Nf4","Qe3","Bg4","Bd5","Rfe8","Bb2","Rd6","Rd2","Nxg2","Kxg2","Bxf3+","Qxf3","Qg5+","Kh1","Qxd2","Qxf7+","Kh7","Rg1"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Nf6","Ng5","d5","exd5","Na5","Bb5+","c6","dxc6","bxc6","Bf1","h6","Nh3","Bc5","d3","Qb6","Qe2","Bg4","f3","Bxh3","gxh3","O-O-O","Nd2","Nd5","Nb3","Bb4+","Bd2","Ne3","Bxb4","Qxb4+","c3","Qh4+","Kd2","Nac4+","Kc1","Rxd3","Bg2","Rhd8","a4","Rd1+","Rxd1","Rxd1+","Qxd1","Nxd1"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 0-1"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","d6","d4","Bd7","Qb3","Qf6","dxe5","dxe5","Rd1","h6","Bxf7+","Qxf7","Qxf7+","Kxf7","Rxd7+","Nge7","Kf1","Ke6","Rd3","Rad8","Ne1","Nc8","Ke2","Nd6","f3","b5","a3","Bb6","Nd2","Na5","Rb1","a6","Nc2","Ndb7","Rxd8","Rxd8","Nb4","Nc5","Nd5","Na4","Kd1","c6","Nxb6","Nxb6","Kc2","Nbc4","Nf1","Rd7","Ra1","Nb6","Be3","Na4","Re1","Nc4","Bc1","c5","h4"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Nf6","Ng5","d5","exd5","Na5","Bb5+","c6","dxc6","bxc6","Bf1","h6","Nh3","Bc5","Qe2","O-O","c3","Bb6","d3","Nd5","Na3","Re8","Bd2","Bf5","O-O-O","Rb8","g4","Bg6","Bg2","Bc5","Nc2","Qb6","b4","Qb5","Be4","Qa4","Kb2","Re7","Bxg6","fxg6","Rb1","Bd6","Rhc1","Rb6","Ka1","Reb7","Rb2","c5","Qe4","Nf6","Qxg6","cxb4","cxb4","Nc6","g5","Ne7"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 0-1"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","d6","Nc3","Bd7","d4","Nge7","Bg5","f6","Be3","Ng6","Qd2","a6","Ba4","b5","Bb3","Na5","O-O","c6","dxe5","fxe5","Bg5","Be7","Rfd1","Nb7","Bxe7","Qxe7","Ng5","Rf8","Nxh7","Rh8","Qg5","Nf4","Qxe7+","Kxe7","Ng5","Rh5","h4","Rxh4","g3","Rg4","Nf3","Rf8","Rd2","Nc5","Nh2","Rg6","Re1","Nh3+","Kg2","Ng5","Rde2","Rh6","Re3","Rfh8","Nf1","Bh3+","Kg1","Bg4","Kg2","b4","f4","Bh3+","Kf2","Rf6","Ne2","Ngxe4+","Kg1","Bxf1","fxe5","dxe5","Rxf1","Rfh6","Rf7+","Kd6","Rxg7","Rh1+","Kg2","Nd2","Rg6+","Kc7","g4","R8h2+","Kg3","Nf1+","Kf3","Rh3+"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Nf6","Ng5","d5","exd5","Na5","Bb5+","c6","dxc6","bxc6","Be2","h6","Nh3","Bc5","O-O","O-O","c3","Nb7","Qa4","Bxh3","gxh3","Qd6","d3","Nd5","Bf3","Bb6","Qh4","Bc7","Rd1","f5","Bxd5+","cxd5","Nd2","Rf6","Kf1","e4","d4","Rg6","Qh5","Rg5","Qh4","Qa6+","c4","dxc4","f4","c3+","Kf2","e3+"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 0-1"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","d6","d4","Bg4","Bb5","exd4","cxd4","Bd7","Bb2","Nf6","Na3","Nxe4","d5","Ne7","Qa4","Bc3","Rab1","Bxb2","Rxb2","Nc5","Qd4","O-O","Bc4","Nf5","Qd2","Qf6","Be2","Rfe8","Nb1","Re7","Nc3","Rae8","Bd1","Nh4","Rb4","Ng6","Bc2","a5","Rd4","Bf5","Ba4","Nxa4","Rxa4","b6","Nd4","Ne5","f4","Ng4","Nc6","Re3","Rd4","Qh4","h3","Nf6","Ne5","Rg3","Nf3","Qxh3","Rf2","Rxg2+","Rxg2","Qxf3","Rf2","Qg3+","Rg2","Re1+"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","d3","d6","c3","g6","Nbd2","Bg7","Nf1","O-O","Ba4","d5","Qe2","Qd6","Bc2","b6","Ng3","Ba6","O-O","dxe4","Nxe4","Nxe4","Qxe4","Bb7","Qh4","Ne7","Ng5","h6","Ne4","Qd7","Bxh6","Nf5","Qh3","Bxe4","dxe4","Bxh6","Rad1","Qc8","exf5","Kg7","f6+","Kh7","Rd7","Qe8","Qg4","Kh8","Be4","Rd8","Re7","Qb5","Bxg6","e4","Bf5","Qxb2","Qh5","Qd2","Rxf7","Rxf7","Qxf7","Qxf2+","Kxf2"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","d6","d4","Bg4","Qa4","exd4","cxd4","a6","Bd5","Bb6","Bxc6+","bxc6","Qxc6+","Bd7","Qc3","Ne7","Na3","O-O","Nc4","d5","exd5","Nxd5","Qc2","Qf6","Bg5","Qg6","Qd2","h6","Bh4","Bg4","Bg3","Rad8","Rfe1","Qh5","Qd3","Bxf3","gxf3","Kh8","a3","Ba7","Rab1","f5","Rb7","Bxd4","Qxd4","f4","Ne5","fxg3","hxg3","Nf4","Qc3","Nd5","Qc5","Qf5","f4","Qc8","Rb3","Nb6","Rc1","Na8","Qc4","Qf5","g4","Qf6","Kg2","Nb6","Qe4","Nd5","f5","Qg5","Rh1","Kg8","Nc6","Rd6","Kg3","Nf6","Qc4+","Kh8","Ne5","Nd5","Rh5","Qe7","Qxd5"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","a6","Ba4","Nf6","d3","Bc5","c3","b5","Bc2","d5","Qe2","O-O","Bg5","dxe4","dxe4","h6","Bh4","Qd6","O-O","Nh5","Bg3","Bg4","b4","Bb6","a4","bxa4","Nbd2","Qf6","Bxa4","Ne7","Qc4","Be6","Bxe5","Bxc4","Bxf6","Nxf6","Nxc4","Nxe4","Nxb6","cxb6","Rfe1","f5","Ne5","Rfc8","c4","Ra7","f3","Nf6","Bb3","Kf8","b5","a5","Red1","Re8","c5","bxc5","Rd6","Rb8","Rad1","Raa8","b6","a4","Bxa4","Kg8","Nc6","Nxc6","Bxc6","Ne8","b7","Ra7","Rd8"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","b4","Bxb4","c3","Ba5","O-O","d6","d4","Bg4","Qa4","Bxf3","gxf3","exd4","cxd4","a6","Bd5","Ne7","Bxc6+","Nxc6","d5","b5","Qa3","Nb4","Qxa5","Qf6","Qa3","Nc2","Qd3","Nxa1","Qe2","O-O","Bb2","Qh6","Bxa1","Rae8","Kh1","f5","Rg1","Rf7","Nd2","Qh5","Qd3","b4","Rg3","a5","Kg2","Qh4","exf5","a4","Ne4","Rb8","Ng5","Rbf8","Qe3","Rxf5","Qe6+","Kh8","Bxg7+","Kxg7","Qe7+","Kg6","Ne6+","Qxg3+","hxg3","R8f7","Qe8","b3","axb3","axb3","g4","Re5","Qg8+"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1892)",
+    "moves": ["Nf3","f5","d4","e6","c4","Nf6","Nc3","Be7","d5","exd5","cxd5","O-O","g3","d6","Bg2","Nbd7","O-O","Ne5","Nd4","Ng6","Qc2","Ne8","f4","Bf6","Be3","Bd7","Bf2","Ne7","Rae1","Bxd4","Bxd4","c5","dxc6","Bxc6","e4","Qd7","Nd5","Nxd5","exd5","Bb5","Rf3","Nc7","Rc3","Na6","Rce3","Rfe8","Re6","Nc7","Qxf5","Nxe6","dxe6","Qe7","Qxb5","Rac8","Qxb7","Rc7","Qe4","Rec8","Bc3","Rc4","Qd3","a5","Rd1","Qa7+","Kh1","R4c7","Qxd6","h5","Be4","Re8","Qe5","Rc5","Rd5","Rxd5","Bxd5","Re7","Qxg7+"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","Nf3","Nc6","d4","exd4","Nxd4","Qh4","Nb5","Qxe4+","Be3","Kd8","N1c3","Qe5","Nd5","Nf6","Nbxc7","Bd6","f4","Qe4","Bd3","Qxg2","Rg1","Qxh2","Qf3","Nxd5","Nxd5","Qh6","O-O-O","f5","Bxf5","g6","Nf6","Qf8","Bxd7","Qxf6","Bxc6","Kc7","Be4","Rf8","Rgf1","Bd7","Rd3","Bc6","Bxc6","bxc6","Bd2","Bc5","Bc3","Qf7","Be5+","Kb7","Rfd1","Qc4","Rc3","Qb5","Rb3","Bb4","Rd7+","Kb6","Bc7+","Ka6","Rxb4"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1892)",
+    "moves": ["Nf3","d5","d4","Nf6","e3","e6","c4","Be7","Nc3","Nbd7","c5","c6","b4","O-O","Bb2","Qc7","Be2","Ne8","O-O","f5","Qc2","Nef6","a4","Ne4","b5","Rf6","a5","Nxc3","Bxc3","a6","bxa6","bxa6","Rfb1","Rf8","Rb2","Bb7","Rab1","Rfb8","Ne1","Bc8","Nd3","Rxb2","Rxb2","Bf6","Qa4","Kf7","Qa3","Bd8","Bd1","Rb8","Rb6","Nxb6","cxb6","Qb7","Ne5+","Kg8","Ba4","Qe7","Bb4","Qf6","Qc3","h6","Bd6","Rxb6","axb6","Bxb6","Qxc6","Qd8","Bc5","Bc7","Ng6","Kh7","Be7","Bd7","Bxd8","Bxc6","Bxc6","Bxd8","Nf8+","Kg8","Nxe6"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","Nc3","Nc6","f4","exf4","d4","Qh4+","Ke2","Nf6","Nf3","Qg4","d5","Ne5","h3","Qh5","Bxf4","Nxf3","gxf3","d6","Kd2","Qh4","Be3","Be7","Nb5","Bd8","Nxa7","Bd7","Nb5","O-O","Nc3","Nh5","Qe1","Ng3","Rg1","Nxf1+","Qxf1","f5","Qg2","Rf7","Rh1","Bf6","Nd1","Re8","f4","Rxe4","c3","Rfe7","Re1","Rxf4","Bf2","Qh5","Be3","Qh4","Bf2","Qg5","Qxg5","Bxg5","Be3","Rfe4","Bxg5","Rxe1","Bxe7","Rxe7","Nf2","Kf7","c4","g5","a4","f4","a5","Bc8","b4","f3","Re1","Rxe1","Kxe1","h5","Kd2","g4","h4","Bf5","Nh1","Ke7","Ng3","Bg6","Ke3","Kd7","b5","Kc8","Kd4","Kb8","Ke3"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 1/2-1/2"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Chigorin, Mikhail I (1892)",
+    "moves": ["Nf3","d5","d4","e6","c4","Nf6","Nc3","Be7","Bg5","O-O","e3","b6","Rc1","Bb7","Be2","Nbd7","cxd5","Nxd5","Nxd5","Bxd5","Bxe7","Qxe7","Rxc7","Qd6","Rc3","Bxa2","e4","Qb4","Qa1","Bb3","Nd2","Bc2","Rc4","Qd6","Rxc2","Qxd4","O-O","Nc5","Bf3","e5","Rd1","Qb4","Qa3","Qb5","Nc4","Ne6","Rd5","Qc6","Rc3","Nf4","Rd6","Qe8","g3","Nh3+","Kg2","Ng5","h4","Ne6","Nxe5","Nc5","Rd5","f6","b4","Na4","Rc7","fxe5","Rdd7","Qg6","Rxg7+","Qxg7","Rxg7+","Kxg7","Qxa4","Rf7","Bg4","Rd8","Qb5","Re7","Qc6","Rf8","Bf5","Rf6","Qd5","h5","Qd8","Ref7","Qe8","Rxf5","exf5","Rxf5","Qe7+","Rf7","Qxe5+","Kg6","Qg5+","Kh7","Qxh5+"],
+    "details": "White: Steinitz, Wilhelm ; Black: Chigorin, Mikhail I ; Score: 1-0"
+  },
+  {
+    "name": "Chigorin, Mikhail I vs Steinitz, Wilhelm (1892)",
+    "moves": ["e4","e5","f4","exf4","Nf3","Nf6","e5","Nh5","Be2","g6","d4","Bg7","O-O","d6","Nc3","O-O","Ne1","dxe5","Bxh5","gxh5","dxe5","Qxd1","Nxd1","Nc6","Bxf4","Bf5","Ne3","Be4","Nf3","Rfe8","Ng5","Bg6","Nd5","Bxe5","Nxc7","Bxc7","Bxc7","Rac8","Bg3","Nd4","c3","Ne2+","Kf2","h4","Bd6","Nd4","cxd4","Rc2+","Kg1","Ree2","Rae1","Rxg2+","Kh1","Kg7","Re8","f5","Ne6+","Kf6","Re7","Rge2","d5","Rcd2","Bb4","Rxh2+"],
+    "details": "White: Chigorin, Mikhail I ; Black: Steinitz, Wilhelm ; Score: 0-1"
+  },
+  {
+    "name": "Lasker, Emanuel vs Steinitz, Wilhelm (1894)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","d6","d4","Bd7","Nc3","Nge7","Bc4","Nxd4","Nxd4","exd4","Qxd4","Nc6","Qe3","Ne5","Bb3","c6","Qg3","Ng6","h4","Be6","Bxe6","fxe6","Bg5","Be7","O-O-O","e5","Be3","O-O","Ne2","Rf7","h5","Nf4","Bxf4","exf4","Qf3","Qa5","Kb1","Qe5","Nd4","Bf6","c3","Re8","Rhe1","Bd8","Qg4","Bc7","Nf3","Qf6","Nd2","Rfe7","f3","d5","Rh1","Re5","g3","Rg5","Qd7","Qf7","Qxf7+","Kxf7","g4","Bb6","exd5","cxd5","Nb3","Re6","Rhf1","Rge5","Nc1","Bc7","Nd3","Rg5","Nb4","Ree5","Rd4","Bb6","Rxf4+","Kg8","Nd3","Re2","Rd1","Be3","Rb4","b6","Ra4","a5","b4","d4","c4","Bd2","b5","Bc3","Rg1","Rd2","f4","Rxg4","Rxg4","Rxd3","c5","Re3","Rc4","d3","Rg1","d2","Rd1","bxc5","b6","Bd4","b7","Re8","Kc2","Rb8","Rb1","Kf7","Ra4"],
+    "details": "White: Lasker, Emanuel ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Lasker, Emanuel (1894)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","Nf6","d3","d6","c3","Bd7","Ba4","g6","Nbd2","Bg7","Nc4","O-O","Ne3","Ne7","Bb3","c6","h4","Qc7","Ng5","d5","f3","Rad8","g4","dxe4","fxe4","h6","Qf3","Be8","Bc2","Nd7","Nh3","Nc5","Nf2","b5","g5","h5","Nf5","gxf5","exf5","f6","g6","Nxg6","fxg6","Bxg6","Rg1","e4","dxe4","Kh7","Rxg6","Kxg6","Qf5+","Kf7","Qxh5+","Kg8","Qxc5","Qe5","Be3","a6","a4","Rfe8","axb5","axb5","Qxe5","Rxe5","Ra6","Rc8","Ng4","Re7","Bc5","Ree8","Ne3","Bf8","Bd4","Kf7","h5","Be7","Bb3+","Kf8","Nf5"],
+    "details": "White: Steinitz, Wilhelm ; Black: Lasker, Emanuel ; Score: 1-0"
+  },
+  {
+    "name": "Lasker, Emanuel vs Steinitz, Wilhelm (1894)",
+    "moves": ["e4","e5","Nf3","Nc6","Bb5","d6","d4","Bd7","Nc3","Nge7","Bc4","exd4","Nxd4","Nxd4","Qxd4","Nc6","Qe3","Ne5","Bb3","Be6","f4","Nc4","Qg3","Nb6","Be3","c6","f5","Bxb3","axb3","Nd7","Bf4","Qc7","b4","f6","Ne2","Ne5","Nd4","Qb6","c3","O-O-O","Ne6","Rd7","Be3","Qb5","Rxa7","b6","Ra8+","Kb7","Rxf8","Rxf8","Nxf8","Qd3","Rf1","Qc2","Bd2","Re7","Ne6","Qxe4+","Qe3","Qxg2","b3","Re8","Qe2","Qh3","Kd1","Ra8","Rf2","Ra2","b5","c5","Nxg7","d5","Kc1","Qd3","Qxd3","Nxd3+","Kb1","Rb2+","Ka1","Rxb3","Rf3","c4","Ne8","Nb4","Rg3","Ra3+","Kb1","Rb3+","Kc1","Nd3+","Rxd3","cxd3","Nxf6","Rxb5","Ne8","Kc6","f6","d4","Ng7","dxc3","Bxc3","Rc5","f7"],
+    "details": "White: Lasker, Emanuel ; Black: Steinitz, Wilhelm ; Score: 1-0"
+  },
+  {
+    "name": "Steinitz, Wilhelm vs Lasker, Emanuel (1894)",
+    "moves": ["e4","e5","Nf3","Nc6","Bc4","Bc5","c3","Nf6","d4","exd4","e5","d5","Bb5","Ne4","cxd4","Be7","Nc3","O-O","Bd3","f5","exf6","Nxf6","Be3","Nb4","Bb1","Ng4","a3","Nxe3","fxe3","Bh4+","g3","Bg4","O-O","Qe8","axb4","Qh5","Nxd5","Rxf3","Nf4","Rxf4","Qb3+","Rf7","Rxf7","Qxf7","Ba2","Qxb3","Bxb3+","Kf8","gxh4","Ke7","Bd5","c6","Be4","a6","Ra5","h6","b5","cxb5","Bxb7","Ra7","Bc6","Bd7","Bxd7","Kxd7","Kf2","Kc6","Ke2","Kb6","Ra1","a5","Kd3","a4","e4","Rf7","e5","Rf3+","Ke4","Rf2","Rb1","Kc6","d5+","Kd7","Kd4","Rd2+","Kc5","Rc2+","Kxb5","Re2","e6+","Kd6","Rd1","Rxb2+","Kxa4","Rxh2","Re1","Ra2+","Kb5","Ra8","Kc4","g5","hxg5","hxg5","Kd4","Ra4+","Kd3","Ra3+","Ke4","g4","Kf4","Ra8","e7","Re8","Kf5","g3","Kf6","Kd7","d6","g2","Rg1"],
+    "details": "White: Steinitz, Wilhelm ; Black: Lasker, Emanuel ; Score: 1-0"
+  }
+]

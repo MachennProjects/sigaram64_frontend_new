@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark-bg:    #080E1E;
+  --navy:       #0D1B3E;
+  --navy-mid:   #12234A;
+  --card-bg:    #10193E;
+  --input-bg:   #152142;
+  --divider:    #1E2E52;
+  --gold:       #C9A84C;
+  --gold-light: #E7CB75;
+  --glow-gold:  rgba(201,168,76,0.25);
+  --glow-blue:  rgba(96,165,250,0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--dark-bg); color: #fff; font-family: 'Inter', 'Noto Sans Tamil', sans-serif; }
+
+/* Tamil text class */
+.tamil { font-family: 'Noto Sans Tamil', 'Inter', sans-serif; }
+
+/* ── Keyframe animations ─────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulseRing {
+  0%   { transform: scale(1);    opacity: 0.8; }
+  100% { transform: scale(1.4);  opacity: 0; }
+}
+
+@keyframes waveBar {
+  0%, 100% { transform: scaleY(0.4); }
+  50%       { transform: scaleY(1); }
+}
+
+@keyframes confettiFall {
+  0%   { transform: translateY(-10px) rotate(0deg);   opacity: 1; }
+  100% { transform: translateY(80px)  rotate(360deg); opacity: 0; }
+}
+
+@keyframes countdownShrink {
+  from { stroke-dashoffset: 0; }
+  to   { stroke-dashoffset: 157; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px var(--glow-gold); }
+  50%       { box-shadow: 0 0 24px var(--glow-gold), 0 0 48px var(--glow-gold); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(201,168,76,0.3); }
+  50%       { border-color: rgba(201,168,76,0.8); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Animation utility classes ───────────────────────────────────────── */
+.animate-fadeIn       { animation: fadeIn 0.3s ease-out both; }
+.animate-slideUp      { animation: slideUp 0.4s ease-out both; }
+.animate-slideInRight { animation: slideInRight 0.35s ease-out both; }
+.animate-pulseRing    { animation: pulseRing 1s ease-out infinite; }
+.animate-float        { animation: float 3s ease-in-out infinite; }
+.animate-glowPulse    { animation: glowPulse 2s ease-in-out infinite; }
+.animate-spin         { animation: spin 1s linear infinite; }
+.animate-countdownTimer { animation: countdownShrink linear both; }
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.1) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Voicebot waveform bars */
+.wave-bar { animation: waveBar 0.8s ease-in-out infinite; }
+.wave-bar:nth-child(2) { animation-delay: 0.1s; }
+.wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.wave-bar:nth-child(4) { animation-delay: 0.3s; }
+.wave-bar:nth-child(5) { animation-delay: 0.4s; }
+
+/* ── Scrollbar styling ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--dark-bg); }
+::-webkit-scrollbar-thumb { background: var(--divider); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+@layer components {
+  /* ── Buttons ── */
+  .btn-gold {
+    @apply bg-gold text-navy font-semibold rounded-full px-6 py-3 hover:bg-gold-light transition-all active:scale-95 cursor-pointer shadow-md;
+  }
+  .btn-outline-gold {
+    @apply border border-gold text-gold font-medium rounded-full px-6 py-3 hover:bg-gold hover:text-navy transition-all active:scale-95 cursor-pointer;
+  }
+  .btn-ghost {
+    @apply bg-navy-mid text-gold-light font-medium rounded-full px-6 py-3 hover:bg-navy transition-all active:scale-95 cursor-pointer;
+  }
+  .btn-danger {
+    @apply bg-red-900/40 text-red-400 border border-red-700/40 font-medium rounded-full px-6 py-3 hover:bg-red-800/40 transition-all active:scale-95 cursor-pointer;
+  }
+  .btn-icon {
+    @apply w-10 h-10 rounded-xl bg-navy-mid flex items-center justify-center text-gray-300 hover:bg-navy hover:text-white transition-all active:scale-90 cursor-pointer;
+  }
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-card-bg rounded-2xl border border-divider;
+  }
+  .card-hover {
+    @apply bg-card-bg rounded-2xl border border-divider hover:border-gold/40 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 cursor-pointer;
+  }
+  .card-glass {
+    @apply rounded-2xl border border-white/10 backdrop-blur-sm;
+    background: rgba(16, 25, 62, 0.7);
+  }
+  .card-glow {
+    @apply bg-card-bg rounded-2xl border border-gold/30;
+    box-shadow: 0 0 20px rgba(201,168,76,0.12), inset 0 1px 0 rgba(201,168,76,0.1);
+  }
+  .card-navy {
+    @apply bg-navy rounded-2xl border border-divider;
+  }
+
+  /* ── Inputs ── */
+  .input-field {
+    @apply w-full bg-input-bg border border-divider rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold transition-colors;
+  }
+
+  /* ── Accents ── */
+  .gold-top-accent {
+    @apply absolute top-0 left-0 right-0 h-[3px] bg-gold rounded-t-2xl;
+  }
+  .gold-left-accent {
+    @apply absolute top-0 left-0 bottom-0 w-[3px] bg-gold rounded-l-2xl;
+  }
+
+  /* ── Badges ── */
+  .coming-soon-badge {
+    @apply bg-navy-mid text-gold-light text-xs font-semibold px-3 py-1 rounded-full;
+  }
+
+  /* ── Typography ── */
+  .section-title {
+    @apply text-4xl font-bold text-white;
+  }
+  .section-sub {
+    @apply text-gray-400 text-lg mt-3;
+  }
+  .label-xs {
+    @apply text-gray-500 text-[10px] font-medium uppercase tracking-wider;
+  }
+
+  /* ── Chess board ── */
+  .chess-board {
+    width: min(calc(100vw - 80px), 360px);
+    height: min(calc(100vw - 80px), 360px);
+  }
+  .chess-board-sm {
+    width: min(calc(100vw - 96px), 300px);
+    height: min(calc(100vw - 96px), 300px);
+  }
+  .chess-board-xs {
+    width: min(calc(100vw - 120px), 220px);
+    height: min(calc(100vw - 120px), 220px);
+  }
+  .chess-square {
+    @apply flex items-center justify-center select-none cursor-pointer transition-all;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  /* ── Divider ── */
+  .divider-gold {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent;
+  }
+
+  /* ── Stat pill ── */
+  .stat-pill {
+    @apply bg-navy-mid border border-divider rounded-xl px-3 py-2 text-center;
+  }
+
+  /* ── Tag chip ── */
+  .chip {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold border;
+  }
+  .chip-gold { @apply chip bg-gold/10 text-gold border-gold/30; }
+  .chip-green { @apply chip bg-green-900/30 text-green-400 border-green-700/30; }
+  .chip-red { @apply chip bg-red-900/30 text-red-400 border-red-700/30; }
+  .chip-blue { @apply chip bg-blue-900/30 text-blue-400 border-blue-700/30; }
+  .chip-gray { @apply chip bg-navy-mid text-gray-400 border-divider; }
+
+  /* ── Progress bar ── */
+  .progress-bar {
+    @apply h-2 bg-navy-mid rounded-full overflow-hidden;
+  }
+  .progress-fill {
+    @apply h-full bg-gold rounded-full transition-all duration-500;
+  }
+  .progress-fill-green {
+    @apply h-full bg-green-400 rounded-full transition-all duration-500;
+  }
+}
+
+@keyframes slideInPiece {
+  from {
+    transform: translate(var(--start-x), var(--start-y));
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
