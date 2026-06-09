@@ -30,3 +30,6 @@ dist-ssr
 
 # OS generated files
 Thumbs.db
+
+# Local sample data
+sampledata/

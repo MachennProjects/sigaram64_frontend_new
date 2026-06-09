@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
-import { DEMO_ACCOUNTS } from "../../../data/users";
 
 export default function LoginScreen() {
   const navigate      = useNavigate();
@@ -252,24 +251,6 @@ export default function LoginScreen() {
                 </div>
               )}
 
-              {/* Development Demo Logins */}
-              {import.meta.env.DEV && (
-                <div className="mb-3 flex flex-col gap-2">
-                  {(["student", "admin", "manager"] as const).map(role => (
-                    <button
-                      key={role}
-                      type="button"
-                      onClick={() => {
-                        setEmail(DEMO_ACCOUNTS[role].email);
-                        setPassword(DEMO_ACCOUNTS[role].password);
-                      }}
-                      className="w-full text-xs bg-navy-mid border border-dashed border-gold/50 text-gold/80 py-2 rounded-xl hover:bg-gold/10 transition-colors"
-                    >
-                      Auto-fill Demo {role.charAt(0).toUpperCase() + role.slice(1)} ID
-                    </button>
-                  ))}
-                </div>
-              )}
 
               {/* Submit */}
               <button
