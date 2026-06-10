@@ -199,8 +199,75 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const login = useCallback(async (email: string, password: string) => {
     // Session-only persistence: user is logged out when browser closes
     await setPersistence(auth, browserSessionPersistence);
-    await signInWithEmailAndPassword(auth, email.trim(), password);
-    // onAuthStateChanged above handles state update automatically
+    const userCredential = await signInWithEmailAndPassword(auth, email.trim(), password);
+    const firebaseUser = userCredential.user;
+
+    let profile = await fetchUserById(firebaseUser.uid);
+    let role: UserRole = 'student';
+
+    if (profile?.role && ['student', 'admin', 'manager'].includes(profile.role)) {
+      role = profile.role as UserRole;
+    } else {
+      const adminRecord = await fetchAdminRecord(firebaseUser.uid);
+      if (adminRecord) {
+        role = adminRecord.role as UserRole || 'admin';
+      }
+    }
+
+    if (profile) {
+      let updatedStreak = profile.streak ?? 0;
+      
+      if (role === 'student') {
+        const todayStr = getLocalDateString();
+        const lastActivityStr = profile.last_activity ? getLocalDateString(profile.last_activity) : '';
+        
+        if (!profile.last_activity) {
+          updatedStreak = 1;
+          await updateUser(firebaseUser.uid, {
+            streak: 1,
+            last_activity: new Date().toISOString()
+          }).catch(err => console.error("Error updating streak:", err));
+        } else if (todayStr !== lastActivityStr) {
+          const diffDays = getDaysDifference(todayStr, lastActivityStr);
+          if (diffDays === 1) {
+            updatedStreak = (profile.streak ?? 0) + 1;
+          } else if (diffDays > 1) {
+            updatedStreak = 1;
+          }
+          
+          if (diffDays >= 1) {
+            await updateUser(firebaseUser.uid, {
+              streak: updatedStreak,
+              last_activity: new Date().toISOString()
+            }).catch(err => console.error("Error updating streak:", err));
+          }
+        }
+      }
+
+      setUser({
+        ...profile,
+        streak: updatedStreak,
+        role,
+        name: profile.Name,
+        id: profile.uid,
+        elo: profile.rating,
+        avatar: (profile.Name?.[0] ?? profile.Email?.[0] ?? '?').toUpperCase(),
+        district: profile.SchoolDistrict,
+        school: profile.SchoolName,
+      } as AppUser);
+    } else {
+      const emailVal = firebaseUser.email ?? '';
+      const displayName = firebaseUser.displayName ?? '';
+      setUser({
+        uid: firebaseUser.uid,
+        id: firebaseUser.uid,
+        Name: displayName,
+        name: displayName,
+        Email: emailVal,
+        role,
+        avatar: (displayName?.[0] ?? emailVal?.[0] ?? '?').toUpperCase(),
+      } as AppUser);
+    }
   }, []);
 
   // ── Logout ────────────────────────────────────────────────────────────────

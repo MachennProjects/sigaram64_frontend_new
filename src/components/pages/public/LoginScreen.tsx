@@ -56,8 +56,7 @@ export default function LoginScreen() {
     setLoading(true);
     try {
       await login(email.trim(), password);
-      // onAuthStateChanged in AuthContext resolves role → RoleRedirect at /home
-      navigate(from, { replace: true });
+      // AuthRoute parent component detects the new auth state and redirects automatically
     } catch (err: any) {
       // Firebase error codes
       const code = err?.code ?? "";
