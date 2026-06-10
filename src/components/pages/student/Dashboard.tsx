@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Crown, Badge } from "../../ui";
 import { useAuth } from "../../../context/AuthContext";
+import { fetchUserGames } from "../../../firebase/firestoreService";
+import { convertLegacyGameToAnalysis } from "../admin/StudentAnalytics";
+import { getGameOutcome } from "../../../engine/gameAnalyzer";
 
 const QUICK_ACTIONS = [
   { icon: "♟", label: "Play Computer", path: "/play", badge: null },
@@ -14,18 +17,41 @@ const QUICK_ACTIONS = [
   { icon: "👤", label: "My Profile", path: "/profile", badge: null },
 ];
 
-const RECENT_GAMES = [
-  { opp: "Arjun K.", result: "Win", rating: "+12", time: "2h ago", color: "♙" },
-  { opp: "Priya M.", result: "Draw", rating: "+3", time: "Yesterday", color: "♙" },
-  { opp: "Kavi S.", result: "Loss", rating: "-8", time: "2d ago", color: "♙" },
-];
+function formatGameResult(resultStr: string, playerColor?: string) {
+  const outcome = getGameOutcome(resultStr || '', playerColor || 'white');
+  if (outcome === 'win') return { label: 'Win', colorClass: 'text-green-400', ratingClass: 'text-green-400' };
+  if (outcome === 'loss') return { label: 'Loss', colorClass: 'text-red-400', ratingClass: 'text-red-400' };
+  return { label: 'Draw', colorClass: 'text-yellow-400', ratingClass: 'text-yellow-400' };
+}
 
-const MISSIONS = [
-  { label: "Solve 3 puzzles", done: 2, total: 3, xp: 30, icon: "🧩" },
-  { label: "Analyze a game", done: 0, total: 1, xp: 20, icon: "📊" },
-  { label: "5-day streak", done: 4, total: 5, xp: 50, icon: "🔥" },
-  { label: "Play 1 game", done: 1, total: 1, xp: 25, icon: "♟" },
-];
+function formatGameTime(dateInput: any): string {
+  if (!dateInput) return '—';
+  let d: Date;
+  if (typeof dateInput === 'string') {
+    d = new Date(dateInput);
+  } else if (typeof dateInput === 'number') {
+    d = new Date(dateInput);
+  } else if (dateInput && typeof dateInput.toMillis === 'function') {
+    d = new Date(dateInput.toMillis());
+  } else if (dateInput && dateInput.seconds) {
+    d = new Date(dateInput.seconds * 1000);
+  } else {
+    d = new Date(dateInput);
+  }
+  
+  const diffMs = Date.now() - d.getTime();
+  const diffMins = Math.floor(diffMs / 60000);
+  const diffHours = Math.floor(diffMins / 60);
+  const diffDays = Math.floor(diffHours / 24);
+  
+  if (diffMins < 1) return 'Just now';
+  if (diffMins < 60) return `${diffMins}m ago`;
+  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffDays === 1) return 'Yesterday';
+  return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+}
+
+
 
 const FAMOUS_GAMES = [
   { white: "Fischer", black: "Spassky", year: "1972", event: "World Championship", icon: "👑" },
@@ -57,8 +83,7 @@ function RatingSparkline() {
 
 export default function StudentDashboard() {
   const navigate = useNavigate();
-  const [selectedTab, setSelectedTab] = useState<'missions' | 'recent'>('missions');
-  const { user } = useAuth();
+  const { user, games: realGames, loadingGames } = useAuth();
   const [quizResult, setQuizResult] = useState<any>(null);
 
   useEffect(() => {
@@ -78,12 +103,19 @@ export default function StudentDashboard() {
             if (cached) {
               setQuizResult(JSON.parse(cached));
             }
-          } catch (e) {}
+          } catch (e) { }
         });
     }
   }, [user]);
 
   const currentElo = quizResult?.estimatedElo ?? (user?.elo ?? 800);
+  const userStreak = user?.streak ?? 0;
+  const missions = [
+    { label: "Solve 3 puzzles", done: 2, total: 3, xp: 30, icon: "🧩" },
+    { label: "Analyze a game", done: 0, total: 1, xp: 20, icon: "📊" },
+    { label: "5-day streak", done: Math.min(userStreak, 5), total: 5, xp: 50, icon: "🔥" },
+    { label: "Play 1 game", done: 1, total: 1, xp: 25, icon: "♟" },
+  ];
 
   const actions = [
     { icon: "♟", label: "Play Computer", path: "/play", badge: null },
@@ -127,7 +159,7 @@ export default function StudentDashboard() {
                   )}
                 </div>
                 {/* Mobile ELO display */}
-                <div className="text-right lg:hidden">
+                {/* <div className="text-right lg:hidden">
                   <div className="text-gold text-3xl font-black">{currentElo}</div>
                   <div className="text-gray-400 text-xs">Elo Rating</div>
                   <div className="mt-1">
@@ -137,7 +169,7 @@ export default function StudentDashboard() {
                       <Badge variant="green">↑ +28</Badge>
                     )}
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* Stats row */}
@@ -145,7 +177,7 @@ export default function StudentDashboard() {
                 <div className="bg-dark-bg/60 backdrop-blur rounded-2xl p-3 md:p-4 flex flex-col items-center text-center md:flex-row md:text-left md:items-center gap-1 md:gap-3 border border-divider/50 hover:border-gold/30 transition-colors">
                   <span className="text-xl md:text-2xl">🔥</span>
                   <div>
-                    <div className="text-white font-bold text-lg md:text-xl leading-none">{(user as any)?.streak || 0}</div>
+                    <div className="text-white font-bold text-lg md:text-xl leading-none">{user?.streak || 0}</div>
                     <div className="text-gray-400 text-[10px] md:text-[11px] uppercase tracking-wider mt-0.5">Day streak</div>
                   </div>
                 </div>
@@ -167,7 +199,7 @@ export default function StudentDashboard() {
             </div>
 
             {/* Rating section */}
-            <div className="mt-6 lg:mt-0 lg:w-1/3 min-w-[280px]">
+            {/* <div className="mt-6 lg:mt-0 lg:w-1/3 min-w-[280px]">
               <div className="hidden lg:flex justify-between items-end mb-2">
                 <div>
                   <div className="text-gold text-4xl font-black">{currentElo}</div>
@@ -183,7 +215,7 @@ export default function StudentDashboard() {
                 <span className="text-gray-500 text-xs">Rating — last 30 days</span>
                 <span className="text-gold text-xs font-semibold">{currentElo} ↑</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -212,113 +244,83 @@ export default function StudentDashboard() {
           </div>
         </div>
 
-        {/* ── 2-Column Desktop Layout for Missions & Recent Games ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-
-          {/* Mobile Tabs */}
-          <div className="flex bg-navy-mid rounded-xl p-1 lg:hidden">
-            {(['missions', 'recent'] as const).map(t => (
-              <button
-                key={t}
-                onClick={() => setSelectedTab(t)}
-                className={`flex-1 py-2.5 rounded-lg text-sm font-semibold transition-colors capitalize ${selectedTab === t ? 'bg-gold text-navy shadow-md' : 'text-gray-400'
-                  }`}
-              >
-                {t === 'missions' ? '🎯 Daily Missions' : '🕹 Recent Games'}
-              </button>
-            ))}
+        {/* ── Full-Width Layout for Recent Games ── */}
+        <div className="w-full">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-white font-bold text-lg flex items-center gap-2">
+              🕹 Recent Games
+            </h3>
+            <button
+              onClick={() => navigate('/profile')}
+              className="text-gold text-sm font-semibold hover:underline"
+            >View All →</button>
           </div>
 
-          {/* Missions Column */}
-          <div className={`${selectedTab === 'missions' ? 'block' : 'hidden'} lg:block`}>
-            <div className="hidden lg:flex items-center justify-between mb-4">
-              <h3 className="text-white font-bold text-lg flex items-center gap-2">
-                🎯 Daily Missions
-              </h3>
-              <p className="text-gray-500 text-sm">Resets in 14h 22m</p>
-            </div>
-
-            <div className="space-y-3 animate-fadeIn">
-              <p className="text-gray-500 text-xs text-right lg:hidden">Resets in 14h 22m</p>
-              {MISSIONS.map((m, i) => {
-                const pct = (m.done / m.total) * 100;
-                const done = m.done >= m.total;
-                return (
-                  <div key={i} className={`card p-4 lg:p-5 relative overflow-hidden hover:border-gold/30 transition-colors ${done ? 'border-green-700/30 bg-green-900/10' : ''
-                    }`}>
-                    {done && <div className="absolute top-0 left-0 bottom-0 w-[4px] bg-green-400 rounded-l-2xl" />}
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-3">
-                        <span className="text-2xl bg-dark-bg p-2 rounded-xl border border-divider shadow-inner">{m.icon}</span>
-                        <span className={`text-base font-medium ${done ? 'text-green-400 line-through opacity-60' : 'text-gray-100'
-                          }`}>{m.label}</span>
+          <div className="card divide-y divide-divider animate-fadeIn overflow-hidden">
+            {loadingGames ? (
+              <div className="divide-y divide-divider">
+                {[1, 2, 3].map((n) => (
+                  <div key={n} className="px-5 py-4 animate-pulse flex items-center justify-between">
+                    <div className="flex items-center gap-4 w-2/3">
+                      <div className="w-12 h-12 bg-navy-mid/60 rounded-xl flex-shrink-0" />
+                      <div className="space-y-2 flex-1">
+                        <div className="h-4 bg-navy-mid/60 rounded w-3/4" />
+                        <div className="h-3 bg-navy-mid/40 rounded w-1/2" />
                       </div>
-                      <span className={`text-sm font-bold bg-navy px-3 py-1 rounded-full border border-divider ${done ? 'text-green-400 border-green-900' : 'text-gold'
-                        }`}>
-                        {done ? '✓ Done' : `+${m.xp} XP`}
-                      </span>
                     </div>
-                    <div className="flex items-center gap-3 mt-2">
-                      <div className="flex-1 h-2 bg-navy-mid rounded-full overflow-hidden">
-                        <div
-                          className={`h-full rounded-full transition-all duration-700 shadow-md ${done ? 'bg-green-400' : 'bg-gradient-to-r from-gold-light to-gold'
-                            }`}
-                          style={{ width: `${pct}%` }}
-                        />
+                    <div className="w-24 h-8 bg-navy-mid/60 rounded-lg" />
+                  </div>
+                ))}
+              </div>
+            ) : realGames.length === 0 ? (
+              <div className="px-5 py-8 text-center text-gray-500 text-sm">
+                No games played yet. <button onClick={() => navigate('/play')} className="text-gold hover:underline font-semibold">Play computer</button> to see your history!
+              </div>
+            ) : (
+              realGames.slice(0, 5).map((game) => {
+                const gameAnalysis = convertLegacyGameToAnalysis(game);
+                const outcome = formatGameResult(game.result, gameAnalysis.playerColor);
+                const dateStr = formatGameTime(game.datePlayed);
+                const isWhite = gameAnalysis.playerColor === 'white';
+                const oppName = game.opponent || `Stockfish (Level ${game.aiLevel ?? 1})`;
+                const accuracy = game.summaryStats?.accuracy;
+
+                return (
+                  <div
+                    key={game.id}
+                    onClick={() => navigate(`/analysis/${game.id}`, { state: { analysisResult: gameAnalysis } })}
+                    className="flex items-center justify-between px-5 py-4 hover:bg-navy-mid/30 transition-colors cursor-pointer"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-mid to-dark-bg border border-divider flex items-center justify-center text-xl shadow-inner select-none">
+                        {isWhite ? "♙" : "♟"}
                       </div>
-                      <span className="text-gray-400 text-xs font-bold w-8 text-right">{m.done}/{m.total}</span>
+                      <div>
+                        <div className="text-white text-base font-semibold">vs {oppName}</div>
+                        <div className="text-gray-500 text-xs mt-0.5">{dateStr}</div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-end gap-1 md:flex-row md:items-center md:gap-4">
+                      <div className="flex items-center gap-2">
+                        <span className={`text-sm font-bold ${outcome.colorClass}`}>{outcome.label}</span>
+                        {accuracy != null && (
+                          <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-dark-bg border border-divider text-gold">
+                            {accuracy}% Acc
+                          </span>
+                        )}
+                      </div>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          navigate(`/analysis/${game.id}`, { state: { analysisResult: gameAnalysis } });
+                        }}
+                        className="text-gold text-xs font-semibold hover:underline bg-gold/10 px-3 py-1.5 rounded-lg border border-gold/20"
+                      >Analyze</button>
                     </div>
                   </div>
                 );
-              })}
-            </div>
-          </div>
-
-          {/* Recent Games Column */}
-          <div className={`${selectedTab === 'recent' ? 'block' : 'hidden'} lg:block`}>
-            <div className="hidden lg:flex items-center justify-between mb-4">
-              <h3 className="text-white font-bold text-lg flex items-center gap-2">
-                🕹 Recent Games
-              </h3>
-              <button
-                onClick={() => navigate('/profile')}
-                className="text-gold text-sm font-semibold hover:underline"
-              >View All →</button>
-            </div>
-
-            <div className="card divide-y divide-divider animate-fadeIn overflow-hidden">
-              {RECENT_GAMES.map((g, i) => (
-                <div key={i} className="flex items-center justify-between px-5 py-4 hover:bg-navy-mid/30 transition-colors">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-mid to-dark-bg border border-divider flex items-center justify-center text-xl shadow-inner">
-                      {g.color}
-                    </div>
-                    <div>
-                      <div className="text-white text-base font-semibold">vs {g.opp}</div>
-                      <div className="text-gray-500 text-xs mt-0.5">{g.time}</div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-end gap-1 md:flex-row md:items-center md:gap-4">
-                    <div className="flex items-center gap-2">
-                      <span className={`text-sm font-bold ${g.result === 'Win' ? 'text-green-400' : g.result === 'Loss' ? 'text-red-400' : 'text-yellow-400'
-                        }`}>{g.result}</span>
-                      <span className={`text-xs font-mono px-2 py-0.5 rounded-md bg-dark-bg border border-divider ${g.rating.startsWith('+') ? 'text-green-400' : 'text-red-400'
-                        }`}>{g.rating}</span>
-                    </div>
-                    <button
-                      onClick={() => navigate('/analysis')}
-                      className="text-gold text-xs font-semibold hover:underline bg-gold/10 px-3 py-1.5 rounded-lg border border-gold/20"
-                    >Analyze</button>
-                  </div>
-                </div>
-              ))}
-              <div className="px-4 py-4 text-center bg-navy-mid/10 lg:hidden">
-                <button
-                  onClick={() => navigate('/profile')}
-                  className="text-gold text-sm font-semibold hover:underline"
-                >View All Games →</button>
-              </div>
-            </div>
+              })
+            )}
           </div>
         </div>
 

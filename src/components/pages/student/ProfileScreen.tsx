@@ -1,21 +1,12 @@
 // Screen 16 — Full Profile Screen with stats, game history, badges
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 import { Badge } from "../../ui";
 import { GameAnalysisResult, getGameOutcome } from "../../../engine/gameAnalyzer";
 import { fetchUserGames } from "../../../firebase/firestoreService";
 import { convertLegacyGameToAnalysis } from "../admin/StudentAnalytics";
-const BADGES = [
-  { icon: '🔥', label: '7-Day Streak', earned: true, desc: 'Played 7 days in a row' },
-  { icon: '♟', label: 'First Win', earned: true, desc: 'Won your first game' },
-  { icon: '🧩', label: 'Puzzle Master', earned: true, desc: 'Solved 50 puzzles' },
-  { icon: '📊', label: 'Analyst', earned: true, desc: 'Analyzed 10 games' },
-  { icon: '🏆', label: 'Tournament Ready', earned: false, desc: 'Win 20 games to unlock' },
-  { icon: '👑', label: 'Grand Master Path', earned: false, desc: 'Reach Elo 1800 to unlock' },
-  { icon: '🌟', label: '100 Games', earned: false, desc: 'Play 100 games to unlock' },
-  { icon: '⚡', label: 'Bullet King', earned: false, desc: 'Win 10 bullet games to unlock' },
-];
+
 
 const STATS = [
   { label: 'Total Games', value: '47', icon: '♟' },
@@ -47,28 +38,28 @@ function RatingSparkline() {
 }
 
 export default function ProfileScreen() {
-  const { user, logout } = useAuth();
+  const { user, logout, games, loadingGames: loadingHistory } = useAuth();
   const navigate = useNavigate();
   const [tab, setTab] = useState<'history' | 'badges' | 'stats'>('history');
-  const [savedGames, setSavedGames] = useState<GameAnalysisResult[]>([]);
-  const [loadingHistory, setLoadingHistory] = useState(true);
 
-  useEffect(() => {
-    if (user?.uid) {
-      setLoadingHistory(true);
-      fetchUserGames(user.uid)
-        .then(gamesData => {
-          const formattedGames = gamesData.map(g => convertLegacyGameToAnalysis(g));
-          setSavedGames(formattedGames);
-        })
-        .catch(e => console.error('Failed to load games from Firebase', e))
-        .finally(() => setLoadingHistory(false));
-    }
-  }, [user]);
+  const savedGames = useMemo(() => {
+    return (games || []).map(g => convertLegacyGameToAnalysis(g));
+  }, [games]);
 
   const wins = savedGames.filter(g => getGameOutcome(g.result, g.playerColor) === 'win').length;
   const losses = savedGames.filter(g => getGameOutcome(g.result, g.playerColor) === 'loss').length;
   const draws = savedGames.filter(g => getGameOutcome(g.result, g.playerColor) === 'draw').length;
+
+  const badges = [
+    { icon: '🔥', label: '7-Day Streak', earned: (user?.streak ?? 0) >= 7, desc: 'Played 7 days in a row' },
+    { icon: '♟', label: 'First Win', earned: (user?.games_won ?? 0) > 0 || wins > 0, desc: 'Won your first game' },
+    { icon: '🧩', label: 'Puzzle Master', earned: (user?.quizCompleted ?? false), desc: 'Complete the placement quiz' },
+    { icon: '📊', label: 'Analyst', earned: (user?.threegameanalysisover ?? false), desc: 'Analyzed 3 games' },
+    { icon: '🏆', label: 'Tournament Ready', earned: (user?.games_won ?? 0) >= 20 || wins >= 20, desc: 'Win 20 games to unlock' },
+    { icon: '👑', label: 'Grand Master Path', earned: (user?.rating ?? 0) >= 1800, desc: 'Reach Elo 1800 to unlock' },
+    { icon: '🌟', label: '100 Games', earned: (user?.games_played ?? 0) >= 100 || savedGames.length >= 100, desc: 'Play 100 games to unlock' },
+    { icon: '⚡', label: 'Bullet King', earned: false, desc: 'Win 10 bullet games to unlock' },
+  ];
 
   return (
     <div className="min-h-screen bg-dark-bg flex flex-col pb-6">
@@ -212,7 +203,11 @@ export default function ProfileScreen() {
                 const dateStr = new Date(g.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 
                 return (
-                  <div key={i} className="px-4 py-3">
+                  <div
+                    key={i}
+                    onClick={() => navigate('/analysis/' + g.id, { state: { analysisResult: g } })}
+                    className="px-4 py-3 cursor-pointer hover:bg-navy-mid/30 transition-colors"
+                  >
                     <div className="flex items-center justify-between mb-1">
                       <div className="flex items-center gap-3">
                         <div className={`w-2 h-8 rounded-full flex-shrink-0 ${bgIndicator}`} />
@@ -226,7 +221,10 @@ export default function ProfileScreen() {
                           {isWin ? 'Win' : isLoss ? 'Loss' : 'Draw'}
                         </span>
                         <button
-                          onClick={() => navigate('/analysis', { state: { analysisResult: g } })}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            navigate('/analysis/' + g.id, { state: { analysisResult: g } });
+                          }}
                           className="text-gold text-xs font-semibold hover:underline bg-gold/10 px-2 py-1 rounded-full border border-gold/30"
                         >
                           Review →
@@ -255,7 +253,7 @@ export default function ProfileScreen() {
             </div>
 
             <div className="grid grid-cols-2 gap-3 opacity-30 pointer-events-none">
-              {BADGES.map((b, i) => (
+              {badges.map((b, i) => (
                 <div
                   key={i}
                   className={`card p-4 relative overflow-hidden ${b.earned

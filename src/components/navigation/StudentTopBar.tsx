@@ -81,14 +81,14 @@ export default function StudentTopBar() {
               {user && (
                 <div className="hidden sm:flex items-center gap-1 bg-navy-mid border border-divider rounded-full px-2.5 py-1">
                   <span className="text-sm">🔥</span>
-                  <span className="text-white text-xs font-bold">7</span>
+                  <span className="text-white text-xs font-bold">{user.streak ?? 0}</span>
                 </div>
               )}
               {/* Notification bell */}
-              <div className="relative cursor-pointer">
+              {/* <div className="relative cursor-pointer">
                 <span className="text-gray-300 text-xl">🔔</span>
                 <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-[9px] text-white flex items-center justify-center font-bold">2</span>
-              </div>
+              </div> */}
               {/* Avatar + menu */}
               <button
                 onClick={() => setShowMenu(m => !m)}

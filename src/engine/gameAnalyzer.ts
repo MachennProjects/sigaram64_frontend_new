@@ -41,6 +41,7 @@ export interface PlayerStats {
 }
 
 export interface GameAnalysisResult {
+  id?: string;
   moves: AnalyzedMove[];
   summary: {
     white: PlayerStats;

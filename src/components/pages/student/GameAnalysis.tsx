@@ -4,6 +4,9 @@ import { GameAnalysisResult, AnalyzedMove, MoveClass } from '../../../engine/gam
 import ChessBoard from '../../chess/ChessBoard';
 import EvalBar from '../../chess/EvalBar';
 import ChessGameLayout, { PlayerInfo } from '../../chess/ChessGameLayout';
+import { useAuth } from '../../../context/AuthContext';
+import { fetchUserGameById } from '../../../firebase/firestoreService';
+import { convertLegacyGameToAnalysis } from '../admin/StudentAnalytics';
 
 const MOVE_COLORS: Record<MoveClass, string> = {
   brilliant: '#1BACA6',
@@ -350,8 +353,13 @@ function getSquareCenter(sq: string, orientation: 'white' | 'black') {
 export default function GameAnalysis() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { uid } = useParams();
-  const analysisResult = location.state?.analysisResult as GameAnalysisResult | undefined;
+  const { uid, gameId } = useParams();
+  const { user } = useAuth();
+  
+  const [analysisResult, setAnalysisResult] = useState<GameAnalysisResult | undefined>(
+    location.state?.analysisResult as GameAnalysisResult | undefined
+  );
+  const [loading, setLoading] = useState(!analysisResult && !!gameId);
 
   const [sideTab, setSideTab] = useState<'moves' | 'info'>('moves');
   const [moveIndex, setMoveIndex] = useState(-1); // -1 = start pos, 0 = first move
@@ -361,18 +369,44 @@ export default function GameAnalysis() {
   const [playSpeed, setPlaySpeed] = useState(2000); // milliseconds
 
   useEffect(() => {
-    if (!analysisResult) {
+    if (!analysisResult && gameId) {
+      setLoading(true);
+      const targetUid = uid || user?.id || user?.uid;
+      if (targetUid) {
+        fetchUserGameById(targetUid, gameId)
+          .then(gameData => {
+            if (gameData) {
+              const parsed = convertLegacyGameToAnalysis(gameData);
+              setAnalysisResult(parsed);
+              setOrientation(parsed.playerColor);
+            } else {
+              console.error("Game not found in Firestore");
+            }
+          })
+          .catch(err => {
+            console.error("Error loading game from Firestore:", err);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+      } else {
+        setLoading(false);
+      }
+    } else if (analysisResult) {
+      setOrientation(analysisResult.playerColor);
+      setLoading(false);
+    }
+  }, [gameId, uid, user]);
+
+  useEffect(() => {
+    if (!analysisResult && !gameId && !loading) {
       if (uid) {
         navigate(`/students/${uid}`);
       } else {
         navigate('/play');
       }
-    } else {
-      setMoveIndex(-1);
-      setOrientation(analysisResult.playerColor);
-      setIsPlaying(false);
     }
-  }, [analysisResult, navigate, uid]);
+  }, [analysisResult, gameId, navigate, uid, loading]);
 
   // Keyboard Navigation
   useEffect(() => {
@@ -412,7 +446,14 @@ export default function GameAnalysis() {
     return () => clearInterval(timer);
   }, [isPlaying, playSpeed, analysisResult]);
 
-  if (!analysisResult) return <div className="p-8 text-white">Loading...</div>;
+  if (loading || !analysisResult) {
+    return (
+      <div className="min-h-screen bg-dark-bg flex flex-col items-center justify-center p-8 text-center">
+        <div className="w-12 h-12 border-4 border-gold border-t-transparent rounded-full animate-spin mb-4" />
+        <p className="text-gray-400 font-medium">Loading game analysis...</p>
+      </div>
+    );
+  }
 
   const currentMove = moveIndex >= 0 ? analysisResult.moves[moveIndex] : null;
   const currentFen = currentMove ? currentMove.fen : (analysisResult.moves[0]?.fenBefore || 'start');

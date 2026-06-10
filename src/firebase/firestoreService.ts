@@ -131,6 +131,20 @@ export async function fetchUserGames(uid: string): Promise<any[]> {
   }
 }
 
+/** Fetch a single game for a specific user by gameId */
+export async function fetchUserGameById(uid: string, gameId: string): Promise<any | null> {
+  try {
+    const snap = await getDoc(doc(db, 'User', uid, 'games', gameId));
+    if (snap.exists()) {
+      return { id: snap.id, ...snap.data() };
+    }
+    return null;
+  } catch (err) {
+    console.error('fetchUserGameById error:', err);
+    return null;
+  }
+}
+
 /** Fetch ALL users (used by admin panel) */
 export async function fetchAllUsers(): Promise<FirestoreUser[]> {
   try {

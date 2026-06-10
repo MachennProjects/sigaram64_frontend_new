@@ -1,6 +1,7 @@
 // Screen 05 — Puzzle Trainer with Move Classification + Voicebot
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Crown, Badge, MobileNavBar } from "../../ui";
+import { useAuth } from "../../../context/AuthContext";
 
 type MoveClass = "brilliant"|"best"|"good"|"inaccuracy"|"mistake"|"blunder"|null;
 
@@ -21,13 +22,20 @@ const PIECES: Record<string,string> = {
 };
 
 export default function PuzzleScreen() {
+  const { user, refreshUser } = useAuth();
   const [selected, setSelected] = useState<number|null>(null);
   const [moveClass, setMoveClass] = useState<MoveClass>(null);
   const [voiceActive, setVoiceActive] = useState(false);
   const [hintShown, setHintShown] = useState(false);
-  const [streak, setStreak] = useState(7);
+  const [streak, setStreak] = useState(user?.streak ?? 0);
   const [showConfetti, setShowConfetti] = useState(false);
   const cpl = 18;
+
+  useEffect(() => {
+    if (user?.streak !== undefined) {
+      setStreak(user.streak);
+    }
+  }, [user?.streak]);
 
   function handleSquareClick(i: number) {
     if (moveClass) return;
@@ -46,6 +54,7 @@ export default function PuzzleScreen() {
     setHintShown(false);
     setShowConfetti(false);
     if (moveClass === "brilliant" || moveClass === "best" || moveClass === "good") {
+      refreshUser();
       setStreak(s => s+1);
     }
   }

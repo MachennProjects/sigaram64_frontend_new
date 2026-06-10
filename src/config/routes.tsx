@@ -74,6 +74,7 @@ export const router = createBrowserRouter([
               { path: '/dashboard', element: <StudentDashboard /> },
               { path: '/puzzle', element: <PuzzleScreen /> },
               { path: '/analysis', element: <GameAnalysis /> },
+              { path: '/analysis/:gameId', element: <GameAnalysis /> },
               { path: '/students/:uid/games/:gameId', element: <GameAnalysis /> },
               { path: '/features', element: <FeatureShelf /> },
               { path: '/play', element: <PlayHub /> },

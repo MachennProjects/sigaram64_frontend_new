@@ -94,8 +94,11 @@ export default function Sidebar({ isOpen = true }: SidebarProps) {
           </div>
           <div className="flex-1 text-left">
             <p className="text-white text-sm font-semibold truncate">{user?.name}</p>
-            <p className="text-gray-400 text-[10px]">
+            {/* <p className="text-gray-400 text-[10px]">
               {isStudent ? `Elo ${user?.elo ?? '—'}` : isAdmin ? 'Admin' : 'Coach'}
+            </p> */}
+            <p className="text-gray-400 text-[10px]">
+              {isStudent ? `Student` : isAdmin ? 'Admin' : 'Coach'}
             </p>
           </div>
         </div>

@@ -59,7 +59,7 @@ export default function PlayWithAI() {
  * ══════════════════════════════════════════════════════════════════════ */
 function PlayWithAIGame({ state }: { state: Record<string, unknown> }) {
   const navigate = useNavigate();
-  const { user, refreshUser } = useAuth();
+  const { user, refreshUser, refreshGames } = useAuth();
 
   const {
     difficulty = 'intermediate' as Difficulty,
@@ -261,7 +261,9 @@ function PlayWithAIGame({ state }: { state: Record<string, unknown> }) {
       // Save to Firestore and update user stats
       if (user?.id && user.id !== 'GUEST') {
         try {
-          await saveUserGame(user.id, analysis);
+          const savedGameId = await saveUserGame(user.id, analysis);
+          analysis.id = savedGameId;
+          setAnalysisResult({ ...analysis });
 
           // Determine game result status for the user
           const resultLower = result.toLowerCase();
@@ -290,6 +292,7 @@ function PlayWithAIGame({ state }: { state: Record<string, unknown> }) {
 
           await updateUser(user.id, updatedFields);
           await refreshUser();
+          await refreshGames();
           console.log('Successfully saved game to Firestore and updated user stats');
         } catch (dbError) {
           console.error('Failed to save game or update user stats in Firestore', dbError);
@@ -300,7 +303,7 @@ function PlayWithAIGame({ state }: { state: Record<string, unknown> }) {
     } finally {
       setIsAnalyzing(false);
     }
-  }, [gameOver, stop, playerColor, config.label, user, refreshUser]);
+  }, [gameOver, stop, playerColor, config.label, user, refreshUser, refreshGames]);
 
   // ── AI move ───────────────────────────────────────────────────────
   const makeAIMove = useCallback(async () => {
@@ -761,7 +764,7 @@ function PlayWithAIGame({ state }: { state: Record<string, unknown> }) {
                   <div className="space-y-2.5">
                     <button
                       disabled={isAnalyzing}
-                      onClick={() => navigate('/analysis', { state: { analysisResult } })}
+                      onClick={() => navigate('/analysis/' + (analysisResult?.id || ''), { state: { analysisResult } })}
                       className="w-full py-3.5 font-bold text-[15px] rounded-lg text-white disabled:opacity-50 transition-all shadow-lg flex items-center justify-center gap-2 hover:brightness-110"
                       style={{ background: 'linear-gradient(180deg, #81b64c 0%, #61893a 100%)' }}
                     >

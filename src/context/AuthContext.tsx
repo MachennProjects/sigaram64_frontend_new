@@ -12,6 +12,8 @@ import { auth } from '../firebase/firebase';
 import {
   fetchUserById,
   fetchAdminRecord,
+  updateUser,
+  fetchUserGames,
   type FirestoreUser,
 } from '../firebase/firestoreService';
 import type { UserRole } from '../data/users';
@@ -28,17 +30,79 @@ interface AuthContextValue {
   login: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
   refreshUser: () => Promise<void>;
+  games: any[];
+  loadingGames: boolean;
+  refreshGames: () => Promise<void>;
 }
 
 // ── Context ───────────────────────────────────────────────────────────────────
 
 const AuthContext = createContext<AuthContextValue | null>(null);
 
+function getLocalDateString(dateInput?: any): string {
+  let d: Date;
+  if (!dateInput) {
+    d = new Date();
+  } else if (typeof dateInput === 'string') {
+    d = new Date(dateInput);
+  } else if (typeof dateInput === 'number') {
+    d = new Date(dateInput);
+  } else if (dateInput && typeof dateInput.toMillis === 'function') {
+    d = new Date(dateInput.toMillis());
+  } else if (dateInput && typeof dateInput.toDate === 'function') {
+    d = dateInput.toDate();
+  } else if (dateInput && dateInput.seconds) {
+    d = new Date(dateInput.seconds * 1000);
+  } else {
+    d = new Date();
+  }
+  
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function getDaysDifference(dateStr1: string, dateStr2: string): number {
+  const d1 = new Date(dateStr1);
+  const d2 = new Date(dateStr2);
+  d1.setHours(0, 0, 0, 0);
+  d2.setHours(0, 0, 0, 0);
+  const diffTime = d1.getTime() - d2.getTime();
+  return Math.round(diffTime / (1000 * 60 * 60 * 24));
+}
+
 // ── Provider ──────────────────────────────────────────────────────────────────
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AppUser | null>(null);
   const [loading, setLoading] = useState(true); // spinner until Firebase ready
+  const [games, setGames] = useState<any[]>([]);
+  const [loadingGames, setLoadingGames] = useState(false);
+
+  const refreshGames = useCallback(async () => {
+    const firebaseUser = auth.currentUser;
+    if (firebaseUser) {
+      setLoadingGames(true);
+      try {
+        const gamesData = await fetchUserGames(firebaseUser.uid);
+        setGames(gamesData || []);
+      } catch (err) {
+        console.error("Error fetching games:", err);
+      } finally {
+        setLoadingGames(false);
+      }
+    }
+  }, []);
+
+  // Fetch games when user is logged in
+  useEffect(() => {
+    if (user) {
+      refreshGames();
+    } else {
+      setGames([]);
+    }
+  }, [user, refreshGames]);
 
   // ── Listen to Firebase auth state changes ────────────────────────────────
   useEffect(() => {
@@ -64,9 +128,39 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }
 
         if (profile) {
+          let updatedStreak = profile.streak ?? 0;
+          
+          if (role === 'student') {
+            const todayStr = getLocalDateString();
+            const lastActivityStr = profile.last_activity ? getLocalDateString(profile.last_activity) : '';
+            
+            if (!profile.last_activity) {
+              updatedStreak = 1;
+              await updateUser(firebaseUser.uid, {
+                streak: 1,
+                last_activity: new Date().toISOString()
+              }).catch(err => console.error("Error updating streak:", err));
+            } else if (todayStr !== lastActivityStr) {
+              const diffDays = getDaysDifference(todayStr, lastActivityStr);
+              if (diffDays === 1) {
+                updatedStreak = (profile.streak ?? 0) + 1;
+              } else if (diffDays > 1) {
+                updatedStreak = 1;
+              }
+              
+              if (diffDays >= 1) {
+                await updateUser(firebaseUser.uid, {
+                  streak: updatedStreak,
+                  last_activity: new Date().toISOString()
+                }).catch(err => console.error("Error updating streak:", err));
+              }
+            }
+          }
+
           // Build aliases so existing UI components (nav bars, sidebars) work
           const appUser: AppUser = {
             ...profile,
+            streak: updatedStreak,
             role,
             // lowercase aliases ↔ Firestore capitalized fields
             name: profile.Name,
@@ -93,6 +187,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }
       } else {
         setUser(null);
+        setGames([]);
       }
       setLoading(false);
     });
@@ -121,8 +216,38 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const profile = await fetchUserById(firebaseUser.uid);
       if (profile) {
         const role = profile.role || 'student';
+        let updatedStreak = profile.streak ?? 0;
+        
+        if (role === 'student') {
+          const todayStr = getLocalDateString();
+          const lastActivityStr = profile.last_activity ? getLocalDateString(profile.last_activity) : '';
+          
+          if (!profile.last_activity) {
+            updatedStreak = 1;
+            await updateUser(firebaseUser.uid, {
+              streak: 1,
+              last_activity: new Date().toISOString()
+            }).catch(err => console.error("Error updating streak:", err));
+          } else if (todayStr !== lastActivityStr) {
+            const diffDays = getDaysDifference(todayStr, lastActivityStr);
+            if (diffDays === 1) {
+              updatedStreak = (profile.streak ?? 0) + 1;
+            } else if (diffDays > 1) {
+              updatedStreak = 1;
+            }
+            
+            if (diffDays >= 1) {
+              await updateUser(firebaseUser.uid, {
+                streak: updatedStreak,
+                last_activity: new Date().toISOString()
+              }).catch(err => console.error("Error updating streak:", err));
+            }
+          }
+        }
+
         setUser({
           ...profile,
+          streak: updatedStreak,
           role,
           name: profile.Name,
           id: profile.uid,
@@ -145,6 +270,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         login,
         logout,
         refreshUser,
+        games,
+        loadingGames,
+        refreshGames,
       }}
     >
       {children}
