@@ -38,11 +38,11 @@ export default function LandingPage() {
           <Crown size={22} />
           <span className="text-gold text-xl font-bold tracking-wide">SIGARAM64</span>
         </div>
-        <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-300">
+        {/* <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-300">
           {["Features","Assessment","For Schools","Districts","Blog"].map(l => (
             <a key={l} href="#" className="hover:text-gold transition-colors">{l}</a>
           ))}
-        </div>
+        </div> */}
         <div className="flex items-center gap-3">
           <span className="hidden md:inline text-xs font-medium text-gold bg-navy-mid border border-gold/30 px-3 py-1 rounded-full cursor-pointer">EN | தமிழ்</span>
           <button onClick={() => navigate('/login')} className="text-sm text-gray-300 hover:text-white transition-colors">Login</button>

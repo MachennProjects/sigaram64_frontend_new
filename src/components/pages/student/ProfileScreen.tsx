@@ -102,13 +102,13 @@ export default function ProfileScreen() {
                 </div>
               </div>
               {/* Mobile ELO display */}
-              <div className="text-right lg:hidden">
+              {/* <div className="text-right lg:hidden">
                 <div className="text-gold text-3xl font-black">{user?.elo ?? '1,240'}</div>
                 <div className="text-gray-400 text-xs">Elo Rating</div>
                 <div className="mt-1">
                   <Badge variant="green">↑ +28</Badge>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Stats row */}
@@ -137,8 +137,8 @@ export default function ProfileScreen() {
             </div>
           </div>
 
-          {/* Rating sparkline inside hero (Desktop pushes it to the right) */}
-          <div className="mt-6 lg:mt-0 lg:w-1/3 min-w-[280px]">
+          {/* Rating section */}
+          {/* <div className="mt-6 lg:mt-0 lg:w-1/3 min-w-[280px]">
             <div className="hidden lg:flex justify-between items-end mb-2">
               <div>
                 <div className="text-gold text-4xl font-black">1,240</div>
@@ -150,30 +150,26 @@ export default function ProfileScreen() {
               <span className="text-gray-500 text-xs">Rating — last 30 days</span>
               <span className="text-gold text-xs font-semibold">1,240 ↑</span>
             </div>
-            <div className="bg-dark-bg/40 backdrop-blur p-4 rounded-2xl border border-white/5">
-              <RatingSparkline />
-              <div className="flex justify-between text-gray-500 text-xs mt-2">
-                <span>1,180</span>
-                <span className="text-gold font-semibold">+60 pts</span>
-              </div>
-            </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Tabs */}
       <div className="mx-4 mt-4">
         <div className="flex bg-navy-mid rounded-xl p-1">
-          {(['history', 'badges', 'stats'] as const).map(t => (
-            <button
-              key={t}
-              onClick={() => setTab(t)}
-              className={`flex-1 py-2 rounded-lg text-xs font-semibold transition-colors capitalize ${tab === t ? 'bg-gold text-navy shadow-md' : 'text-gray-400'
-                }`}
-            >
-              {t === 'history' ? '🕹 History' : t === 'badges' ? '🏅 Badges' : '📊 Stats'}
-            </button>
-          ))}
+          {(['history', 'badges', 'stats'] as const).map(t => {
+            const isLocked = t === 'badges' || t === 'stats';
+            return (
+              <button
+                key={t}
+                onClick={() => setTab(t)}
+                className={`flex-1 py-2 rounded-lg text-xs font-semibold transition-all capitalize ${tab === t ? 'bg-gold text-navy shadow-md' : 'text-gray-400 hover:text-white'
+                  }`}
+              >
+                {t === 'history' ? '🕹 History' : t === 'badges' ? '🏅 Badges 🔒' : '📊 Stats 🔒'}
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -214,7 +210,7 @@ export default function ProfileScreen() {
                 const resultColor = isWin ? 'text-green-400' : isLoss ? 'text-red-400' : 'text-yellow-400';
                 const bgIndicator = isWin ? 'bg-green-400' : isLoss ? 'bg-red-400' : 'bg-yellow-400';
                 const dateStr = new Date(g.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-                
+
                 return (
                   <div key={i} className="px-4 py-3">
                     <div className="flex items-center justify-between mb-1">
@@ -246,92 +242,118 @@ export default function ProfileScreen() {
 
         {/* Badges */}
         {tab === 'badges' && (
-          <div className="grid grid-cols-2 gap-3 animate-fadeIn">
-            {BADGES.map((b, i) => (
-              <div
-                key={i}
-                className={`card p-4 relative overflow-hidden ${b.earned
+          <div className="relative animate-fadeIn min-h-[300px] rounded-2xl overflow-hidden">
+            {/* Glassmorphic Lock Overlay */}
+            <div className="absolute inset-0 backdrop-blur-md bg-dark-bg/75 z-10 flex flex-col items-center justify-center text-center p-6 border border-divider/40 rounded-2xl">
+              <div className="w-16 h-16 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center mb-3 text-2xl shadow-lg">
+                🔒
+              </div>
+              <h3 className="text-white font-bold text-lg">Badges Locked</h3>
+              <p className="text-gray-400 text-xs mt-1.5 max-w-xs leading-relaxed">
+                Play more games and complete lessons to unlock badges and track your achievements!
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 opacity-30 pointer-events-none">
+              {BADGES.map((b, i) => (
+                <div
+                  key={i}
+                  className={`card p-4 relative overflow-hidden ${b.earned
                     ? 'border-gold/30 bg-gold/5'
                     : 'opacity-50'
-                  }`}
-              >
-                {b.earned && <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold" />}
-                <span className="text-3xl block mb-2">{b.icon}</span>
-                <p className={`text-sm font-bold mb-0.5 ${b.earned ? 'text-gold' : 'text-gray-500'
-                  }`}>{b.label}</p>
-                <p className="text-gray-500 text-xs leading-tight">{b.desc}</p>
-                {b.earned && (
-                  <div className="absolute top-3 right-3">
-                    <span className="text-green-400 text-xs font-bold">✓</span>
-                  </div>
-                )}
-              </div>
-            ))}
+                    }`}
+                >
+                  {b.earned && <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold" />}
+                  <span className="text-3xl block mb-2">{b.icon}</span>
+                  <p className={`text-sm font-bold mb-0.5 ${b.earned ? 'text-gold' : 'text-gray-500'
+                    }`}>{b.label}</p>
+                  <p className="text-gray-500 text-xs leading-tight">{b.desc}</p>
+                  {b.earned && (
+                    <div className="absolute top-3 right-3">
+                      <span className="text-green-400 text-xs font-bold">✓</span>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
         {/* Stats */}
         {tab === 'stats' && (
-          <div className="space-y-3 animate-fadeIn">
-            <div className="grid grid-cols-2 gap-3">
-              {STATS.map((s, i) => (
-                <div key={i} className="card p-4 relative overflow-hidden">
-                  <div className="absolute top-0 left-0 bottom-0 w-[3px] bg-gold rounded-l-2xl" />
-                  <span className="text-2xl block mb-2">{s.icon}</span>
-                  <div className="text-gold text-2xl font-black">{s.value}</div>
-                  <div className="text-gray-400 text-xs mt-0.5">{s.label}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* Openings breakdown */}
-            <div className="card p-4">
-              <p className="text-gray-400 text-xs font-semibold mb-3 uppercase tracking-wider">Top Openings</p>
-              {[
-                { name: 'Italian Game', count: 12, pct: 70 },
-                { name: 'Ruy Lopez', count: 8, pct: 50 },
-                { name: 'Sicilian', count: 6, pct: 33 },
-                { name: 'Queen\'s Gambit', count: 5, pct: 60 },
-              ].map((o, i) => (
-                <div key={i} className="mb-3 last:mb-0">
-                  <div className="flex justify-between text-xs mb-1">
-                    <span className="text-gray-300 font-medium">{o.name}</span>
-                    <span className="text-gray-500">{o.count} games · {o.pct}% win</span>
-                  </div>
-                  <div className="h-1.5 bg-navy-mid rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-gold rounded-full transition-all duration-700"
-                      style={{ width: `${o.pct}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Accuracy ring chart placeholder */}
-            <div className="card p-5 text-center">
-              <p className="text-gray-400 text-xs font-semibold mb-4 uppercase tracking-wider">Accuracy This Month</p>
-              <div className="relative w-28 h-28 mx-auto mb-3">
-                <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                  <circle cx="50" cy="50" r="40" fill="none" stroke="#1E2E52" strokeWidth="10" />
-                  <circle
-                    cx="50" cy="50" r="40" fill="none"
-                    stroke="#C9A84C" strokeWidth="10"
-                    strokeDasharray="251.2"
-                    strokeDashoffset={251.2 * (1 - 0.78)}
-                    strokeLinecap="round"
-                    className="transition-all duration-1000"
-                  />
-                </svg>
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-gold text-2xl font-black">78%</span>
-                  <span className="text-gray-500 text-[10px]">Accuracy</span>
-                </div>
+          <div className="relative animate-fadeIn min-h-[400px] rounded-2xl overflow-hidden">
+            {/* Glassmorphic Lock Overlay */}
+            <div className="absolute inset-0 backdrop-blur-md bg-dark-bg/75 z-10 flex flex-col items-center justify-center text-center p-6 border border-divider/40 rounded-2xl">
+              <div className="w-16 h-16 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center mb-3 text-2xl shadow-lg">
+                🔒
               </div>
-              <div className="flex justify-center gap-6 text-xs">
-                <div><span className="text-cyan-400 font-bold">✨ 3</span> <span className="text-gray-500">Brilliant</span></div>
-                <div><span className="text-gold font-bold">★ 12</span> <span className="text-gray-500">Best</span></div>
-                <div><span className="text-red-400 font-bold">?? 2</span> <span className="text-gray-500">Blunders</span></div>
+              <h3 className="text-white font-bold text-lg">Stats Locked</h3>
+              <p className="text-gray-400 text-xs mt-1.5 max-w-xs leading-relaxed">
+                Complete your chess assessment to unlock detailed analytics, top openings, and accuracy charts!
+              </p>
+            </div>
+
+            <div className="space-y-3 opacity-30 pointer-events-none">
+              <div className="grid grid-cols-2 gap-3">
+                {STATS.map((s, i) => (
+                  <div key={i} className="card p-4 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 bottom-0 w-[3px] bg-gold rounded-l-2xl" />
+                    <span className="text-2xl block mb-2">{s.icon}</span>
+                    <div className="text-gold text-2xl font-black">{s.value}</div>
+                    <div className="text-gray-400 text-xs mt-0.5">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Openings breakdown */}
+              <div className="card p-4">
+                <p className="text-gray-400 text-xs font-semibold mb-3 uppercase tracking-wider">Top Openings</p>
+                {[
+                  { name: 'Italian Game', count: 12, pct: 70 },
+                  { name: 'Ruy Lopez', count: 8, pct: 50 },
+                  { name: 'Sicilian', count: 6, pct: 33 },
+                  { name: 'Queen\'s Gambit', count: 5, pct: 60 },
+                ].map((o, i) => (
+                  <div key={i} className="mb-3 last:mb-0">
+                    <div className="flex justify-between text-xs mb-1">
+                      <span className="text-gray-300 font-medium">{o.name}</span>
+                      <span className="text-gray-500">{o.count} games · {o.pct}% win</span>
+                    </div>
+                    <div className="h-1.5 bg-navy-mid rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-gold rounded-full transition-all duration-700"
+                        style={{ width: `${o.pct}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Accuracy ring chart placeholder */}
+              <div className="card p-5 text-center">
+                <p className="text-gray-400 text-xs font-semibold mb-4 uppercase tracking-wider">Accuracy This Month</p>
+                <div className="relative w-28 h-28 mx-auto mb-3">
+                  <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#1E2E52" strokeWidth="10" />
+                    <circle
+                      cx="50" cy="50" r="40" fill="none"
+                      stroke="#C9A84C" strokeWidth="10"
+                      strokeDasharray="251.2"
+                      strokeDashoffset={251.2 * (1 - 0.78)}
+                      strokeLinecap="round"
+                      className="transition-all duration-1000"
+                    />
+                  </svg>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <span className="text-gold text-2xl font-black">78%</span>
+                    <span className="text-gray-500 text-[10px]">Accuracy</span>
+                  </div>
+                </div>
+                <div className="flex justify-center gap-6 text-xs">
+                  <div><span className="text-cyan-400 font-bold">✨ 3</span> <span className="text-gray-500">Brilliant</span></div>
+                  <div><span className="text-gold font-bold">★ 12</span> <span className="text-gray-500">Best</span></div>
+                  <div><span className="text-red-400 font-bold">?? 2</span> <span className="text-gray-500">Blunders</span></div>
+                </div>
               </div>
             </div>
           </div>

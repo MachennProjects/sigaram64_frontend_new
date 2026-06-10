@@ -87,7 +87,7 @@ export default function StudentDashboard() {
 
   const actions = [
     { icon: "♟", label: "Play Computer", path: "/play", badge: null },
-    { icon: "🧩", label: "Daily Puzzle", path: "/puzzle", badge: "3 new" },
+    { icon: "🧩", label: "Daily Puzzle", path: "#", badge: "🔒 Locked" },
     { icon: "🧠", label: "Assessment", path: "/assessment", badge: quizResult?.quizCompleted ? "✅ Done" : "New" },
     { icon: "📚", label: "Learn", path: "/lessons", badge: null },
     { icon: "🏆", label: "Famous Games", path: "/famous-games", badge: null },
@@ -145,28 +145,28 @@ export default function StudentDashboard() {
                 <div className="bg-dark-bg/60 backdrop-blur rounded-2xl p-3 md:p-4 flex flex-col items-center text-center md:flex-row md:text-left md:items-center gap-1 md:gap-3 border border-divider/50 hover:border-gold/30 transition-colors">
                   <span className="text-xl md:text-2xl">🔥</span>
                   <div>
-                    <div className="text-white font-bold text-lg md:text-xl leading-none">7</div>
+                    <div className="text-white font-bold text-lg md:text-xl leading-none">{(user as any)?.streak || 0}</div>
                     <div className="text-gray-400 text-[10px] md:text-[11px] uppercase tracking-wider mt-0.5">Day streak</div>
                   </div>
                 </div>
-                <div className="bg-dark-bg/60 backdrop-blur rounded-2xl p-3 md:p-4 flex flex-col items-center text-center md:flex-row md:text-left md:items-center gap-1 md:gap-3 border border-divider/50 hover:border-gold/30 transition-colors">
+                <div className="bg-dark-bg/60 backdrop-blur rounded-2xl p-3 md:p-4 flex flex-col items-center text-center md:flex-row md:text-left md:items-center gap-1 md:gap-3 border border-divider/50 hover:border-gold/30 transition-colors opacity-50">
                   <span className="text-xl md:text-2xl">⭐</span>
                   <div>
-                    <div className="text-white font-bold text-lg md:text-xl leading-none">340</div>
+                    <div className="text-white font-bold text-lg md:text-xl leading-none flex items-center gap-1">🔒 <span>340</span></div>
                     <div className="text-gray-400 text-[10px] md:text-[11px] uppercase tracking-wider mt-0.5">XP total</div>
                   </div>
                 </div>
-                <div className="bg-dark-bg/60 backdrop-blur rounded-2xl p-3 md:p-4 flex flex-col items-center text-center md:flex-row md:text-left md:items-center gap-1 md:gap-3 border border-divider/50 hover:border-gold/30 transition-colors">
+                <div className="bg-dark-bg/60 backdrop-blur rounded-2xl p-3 md:p-4 flex flex-col items-center text-center md:flex-row md:text-left md:items-center gap-1 md:gap-3 border border-divider/50 hover:border-gold/30 transition-colors opacity-50">
                   <span className="text-xl md:text-2xl">🏅</span>
                   <div>
-                    <div className="text-white font-bold text-lg md:text-xl leading-none">5</div>
+                    <div className="text-white font-bold text-lg md:text-xl leading-none flex items-center gap-1">🔒 <span>5</span></div>
                     <div className="text-gray-400 text-[10px] md:text-[11px] uppercase tracking-wider mt-0.5">Badges</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Rating sparkline inside hero (Desktop pushes it to the right) */}
+            {/* Rating section */}
             <div className="mt-6 lg:mt-0 lg:w-1/3 min-w-[280px]">
               <div className="hidden lg:flex justify-between items-end mb-2">
                 <div>
@@ -181,14 +181,7 @@ export default function StudentDashboard() {
               </div>
               <div className="flex items-center justify-between mb-1 lg:hidden">
                 <span className="text-gray-500 text-xs">Rating — last 30 days</span>
-                <span className="text-gold text-xs font-semibold">1,240 ↑</span>
-              </div>
-              <div className="bg-dark-bg/40 backdrop-blur p-4 rounded-2xl border border-white/5">
-                <RatingSparkline />
-                <div className="flex justify-between text-gray-500 text-xs mt-2">
-                  <span>1,180</span>
-                  <span className="text-gold font-semibold">+60 pts</span>
-                </div>
+                <span className="text-gold text-xs font-semibold">{currentElo} ↑</span>
               </div>
             </div>
           </div>

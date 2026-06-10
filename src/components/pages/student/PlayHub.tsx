@@ -332,10 +332,10 @@ function BlindTab() {
 export default function PlayHub() {
   const [mode, setMode] = useState<GameMode>('computer');
 
-  const MODES: { key: GameMode; icon: string; label: string; sub: string }[] = [
+  const MODES: { key: GameMode; icon: string; label: string; sub: string; locked?: boolean }[] = [
     { key: 'computer',  icon: '🤖', label: 'vs Computer', sub: 'Stockfish AI' },
-    { key: 'friend',    icon: '🤝', label: 'vs Friend',   sub: 'Online invite' },
-    { key: 'blindfold', icon: '🙈', label: 'Blindfold',   sub: 'Expert mode' },
+    { key: 'friend',    icon: '🤝', label: 'vs Friend',   sub: 'Coming Soon', locked: true },
+    { key: 'blindfold', icon: '🙈', label: 'Blindfold',   sub: 'Coming Soon', locked: true },
   ];
 
   return (
@@ -352,19 +352,24 @@ export default function PlayHub() {
           {MODES.map(m => (
             <button
               key={m.key}
-              onClick={() => setMode(m.key)}
+              onClick={() => {
+                if (!m.locked) setMode(m.key);
+              }}
               className={`flex flex-col items-center gap-1.5 p-4 rounded-2xl border transition-all active:scale-95 relative overflow-hidden ${
-                mode === m.key
+                mode === m.key && !m.locked
                   ? 'border-gold bg-gold/10 shadow-lg'
                   : 'border-divider bg-card-bg hover:border-gold/40'
-              }`}
+              } ${m.locked ? 'opacity-50 cursor-not-allowed hover:border-divider' : ''}`}
             >
-              {mode === m.key && (
+              {mode === m.key && !m.locked && (
                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold" />
+              )}
+              {m.locked && (
+                <div className="absolute top-2 right-2 text-xs">🔒</div>
               )}
               <span className="text-2xl">{m.icon}</span>
               <span className={`text-xs font-bold ${
-                mode === m.key ? 'text-gold' : 'text-white'
+                mode === m.key && !m.locked ? 'text-gold' : 'text-white'
               }`}>{m.label}</span>
               <span className="text-gray-500 text-[10px]">{m.sub}</span>
             </button>

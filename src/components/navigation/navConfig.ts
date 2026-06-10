@@ -9,7 +9,7 @@ export interface NavItem {
 export const STUDENT_NAV_TABS: NavItem[] = [
   { icon: '🏠', label: 'Home', path: '/dashboard' },
   { icon: '♟', label: 'Play', path: '/play' },
-  { icon: '🧩', label: 'Puzzles', path: '/puzzle' },
+  { icon: '🧩', label: 'Puzzles 🔒', path: '/features' },
   { icon: '📚', label: 'Learn', path: '/lessons' },
   { icon: '🏆', label: 'Famous Games', path: '/famous-games' },
   { icon: '📋', label: 'PGN Viewer', path: '/pgn-load' },
@@ -28,7 +28,7 @@ export const ADMIN_NAV: NavItem[] = [
   { icon: '📄', label: 'Renewal Reports', path: '/renewal-report' },
   // Admin can also switch to student view
   { icon: '🏠', label: 'Student View', path: '/dashboard' },
-  { icon: '♟', label: 'Puzzle', path: '/puzzle' },
+  { icon: '🧩', label: 'Puzzle 🔒', path: '/features' },
   { icon: '📈', label: 'Game Analysis', path: '/analysis' },
   { icon: '📚', label: 'Lessons', path: '/lessons' },
 ];

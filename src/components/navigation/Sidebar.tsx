@@ -38,9 +38,8 @@ export default function Sidebar({ isOpen = true }: SidebarProps) {
       <button
         key={item.path}
         onClick={() => navigate(item.path)}
-        className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl transition-all active:scale-95 text-left ${
-          isActive ? activeClass : inactiveClass
-        }`}
+        className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl transition-all active:scale-95 text-left ${isActive ? activeClass : inactiveClass
+          }`}
       >
         <span className="text-xl">{item.icon}</span>
         <span className="text-sm">{item.label}</span>
