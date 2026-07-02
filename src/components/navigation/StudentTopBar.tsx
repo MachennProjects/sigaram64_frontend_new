@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { STUDENT_DROPDOWN_LINKS } from '../navigation/navConfig';
+import logoIcon from '../../assets/Logo/sigaram64_icon_transparent_512.png';
 
 export default function StudentTopBar() {
   const { user, logout } = useAuth();
@@ -52,7 +53,11 @@ export default function StudentTopBar() {
       <div className={`flex items-center justify-between px-5 pt-5 pb-3 bg-navy border-b border-divider sticky top-0 z-40`}>
         <div className={`flex items-center gap-2`}>
           {/* Hide crown icon on desktop since sidebar has it, but show title */}
-          <span className={`text-gold text-lg ${isQuizRoute ? '' : 'md:hidden'}`}>♛</span>
+          <img
+            src={logoIcon}
+            alt=""
+            className={`h-5 w-5 object-contain ${isQuizRoute ? '' : 'md:hidden'}`}
+          />
           <span className="text-gold font-bold text-sm tracking-wide uppercase">{pageTitle}</span>
         </div>
 

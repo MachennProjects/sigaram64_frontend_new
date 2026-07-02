@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { ADMIN_NAV, MANAGER_NAV, STUDENT_NAV_TABS } from '../navigation/navConfig';
+import logoHorizontal from '../../assets/Logo/sigaram64_horizontal_transparent_3000.png';
 
 interface SidebarProps {
   isOpen?: boolean;
@@ -50,12 +51,11 @@ export default function Sidebar({ isOpen = true }: SidebarProps) {
   return (
     <div className="hidden md:flex fixed top-0 left-0 bottom-0 w-64 bg-navy border-r border-divider flex-col overflow-y-auto z-50">
       {/* Brand */}
-      <div className="px-5 py-5 border-b border-divider mb-4">
-        <div className="flex items-center gap-2 mb-0.5">
-          <span className="text-gold text-xl">♛</span>
-          <span className="text-gold font-bold tracking-wide">SIGARAM64</span>
+      <div className="px-5 py-4 border-b border-divider mb-4">
+        <div className="flex items-center gap-2 mb-1.5">
+          <img src={logoHorizontal} alt="SIGARAM64 Logo" className="h-auto w-42 object-contain" />
         </div>
-        <p className="text-gray-500 text-xs ml-7">{subBrand}</p>
+        <p className="text-gray-500 text-[10px] uppercase tracking-wider font-semibold ml-0.5">{subBrand}</p>
       </div>
 
       {/* Nav links */}

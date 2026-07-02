@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { DISTRICTS } from '../navigation/navConfig';
 import { triggerPrint } from '../../services/exportService';
+import logoHorizontal from '../../assets/Logo/sigaram64_horizontal_transparent_3000.png';
 
 interface AdminTopBarProps {
   district?: string;
@@ -29,8 +30,7 @@ export default function AdminTopBar({ district, onDistrictChange, onToggleSideba
 
         {/* Logo — mobile only */}
         <div className="flex items-center gap-1 lg:hidden">
-          <span className="text-gold text-lg">♛</span>
-          <span className="text-gold font-bold text-sm">SIGARAM64</span>
+          <img src={logoHorizontal} alt="SIGARAM64 Logo" className="h-9 w-auto object-contain" />
         </div>
 
         {/* District selector (Admin only) */}

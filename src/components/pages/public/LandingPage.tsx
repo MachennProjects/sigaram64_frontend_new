@@ -2,6 +2,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Crown, Badge, FeatureCard, SectionHeader, StatCard } from "../../ui";
+import logoHorizontal from "../../../assets/Logo/sigaram64_horizontal_transparent_3000.png";
 
 const PILLARS = [
   { icon:"🧠", title:"Adaptive Assessment",   tag:"Phase 1 · Live", desc:"8–12 min CAT engine. Board clicks only — no notation typing. Elo 400–2400. Bilingual Tamil & English. Accurate from first attempt." },
@@ -35,8 +36,7 @@ export default function LandingPage() {
       {/* ── NAVBAR ── */}
       <nav className="w-full bg-navy border-b-2 border-gold px-6 lg:px-20 py-4 flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center gap-2">
-          <Crown size={22} />
-          <span className="text-gold text-xl font-bold tracking-wide">SIGARAM64</span>
+          <img src={logoHorizontal} alt="SIGARAM64 Logo" className="h-12 w-auto object-contain" />
         </div>
         {/* <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-300">
           {["Features","Assessment","For Schools","Districts","Blog"].map(l => (

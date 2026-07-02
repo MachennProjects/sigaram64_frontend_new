@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
+import logoHorizontal from "../../../assets/Logo/sigaram64_horizontal_transparent_3000.png";
+import logoIcon from "../../../assets/Logo/sigaram64_icon_transparent_512.png";
 
 export default function LoginScreen() {
   const navigate      = useNavigate();
@@ -94,8 +96,7 @@ export default function LoginScreen() {
 
         {/* Logo */}
         <div className="flex items-center gap-2 mb-6 xl:mb-10">
-          <span className="text-gold text-3xl">♛</span>
-          <span className="text-gold font-bold text-xl tracking-widest">SIGARAM64</span>
+          <img src={logoHorizontal} alt="SIGARAM64 Logo" className="h-16 w-auto object-contain" />
         </div>
 
         {/* Chess board visual */}
@@ -160,8 +161,7 @@ export default function LoginScreen() {
         {/* Top bar */}
         <div className="flex items-center justify-between px-5 pt-5 pb-3">
           <div className="flex items-center gap-2 lg:hidden">
-            <span className="text-gold text-xl">♛</span>
-            <span className="text-gold font-bold text-lg tracking-wide">SIGARAM64</span>
+            <img src={logoHorizontal} alt="SIGARAM64 Logo" className="h-10 w-auto object-contain" />
           </div>
           <div className="hidden lg:block" />
           <button
@@ -178,8 +178,8 @@ export default function LoginScreen() {
 
             {/* Header */}
             <div className="text-center mb-6">
-              <div className="w-12 h-12 rounded-xl bg-navy-mid border border-gold/30 flex items-center justify-center mx-auto mb-2 shadow-md">
-                <span className="text-2xl">♛</span>
+              <div className="w-14 h-14 rounded-xl bg-navy-mid border border-gold/30 flex items-center justify-center mx-auto mb-2 shadow-md p-2.5">
+                <img src={logoIcon} alt="SIGARAM64" className="w-full h-full object-contain" />
               </div>
               <h1 className="text-xl font-bold text-white mb-1">{t.title}</h1>
               <p className={`text-gray-400 text-xs ${lang === "ta" ? "tamil" : ""}`}>{t.sub}</p>

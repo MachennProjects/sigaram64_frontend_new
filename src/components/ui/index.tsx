@@ -1,7 +1,8 @@
 // ─── Shared UI Components — SIGARAM64 Design System ───
+import logoIcon from '../../assets/Logo/sigaram64_icon_transparent_512.png';
 
 export const Crown = ({ size = 24, className = "" }) => (
-  <span style={{ fontSize: size }} className={`text-gold ${className}`}>♛</span>
+  <img src={logoIcon} alt="Crown Logo" style={{ height: size, width: size }} className={`object-contain ${className}`} />
 );
 
 export const GoldBar = () => (
